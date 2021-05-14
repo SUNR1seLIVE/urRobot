@@ -1,1 +1,190 @@
+#popup1 {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 8, 47, 0.4);
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
 
+  .message1 {
+    margin: 102px auto auto;
+    width: 700px;
+    height: 604px;
+    background: #ffffff;
+    box-shadow: 0 0 14px #0000003d, 0 14px 14px #0000001f;
+    border-radius: 10px;
+
+    overflow: hidden;
+    opacity: 0;
+    transform: translate(0, 0) scale(0.25);
+    transition: all 0.5s 0.2s;
+
+    .message1__header {
+      height: 79px;
+      display: flex;
+      justify-content: space-between;
+      .message1__title-text {
+        height: max-content;
+        margin-left: 40px;
+        margin-top: 30px;
+        font-family: Inter;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 29px;
+        letter-spacing: 0.03em;
+        color: #333333;
+      }
+      .close-btn {
+        width: 15px;
+        height: 15px;
+        margin-right: 20px;
+        margin-top: 20px;
+      }
+    }
+
+    .message1__content {
+      height: 420px;
+      overflow-y: scroll;
+
+      .message1__item {
+        width: 100%;
+        height: 60px;
+        padding: 0 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: background .5s;
+
+        .message1__item-icon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-right: 25px;
+          width: 30px;
+          height: 30px;
+          background: linear-gradient(180deg, #07d6c1 0%, #25b2d4 27.08%, #5080cd 70.31%, #6169bf 100%);
+          border-radius: 10px;
+        }
+
+        .message1__item-description{
+          height: 100%;
+          margin-right: 25px;
+          padding-top: 11px;
+          padding-bottom: 10px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          flex: 1 0 30%;
+
+          font-family: Inter;
+          font-style: normal;
+          font-weight: 500;
+          letter-spacing: 0.04em;
+          text-align: left;
+          color: #4F4F4F;
+          .message1__item-description-title{
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 19px;
+            color: #000000;
+          }
+          .message1__item-description-msg{
+            font-size: 12px;
+            line-height: 15px;
+          }
+        }
+
+        .message1__item-time{
+          height: 100%;
+          padding-top: 11px;
+          padding-bottom: 10px;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+
+          font-size: 12px;
+          line-height: 15px;
+          color: #4F4F4F;
+        }
+
+        &.selected{
+          background: rgba(56, 158, 224, 0.25);
+          .message1__item-description{
+            color: #000000;
+          }
+  
+          .message1__item-time{
+            color: #000000;
+          }
+        }
+
+        &:hover{
+          cursor: pointer;
+          background: rgba(56, 158, 224, 0.25);
+        }
+      }
+
+
+      &::-webkit-scrollbar {
+        width: 0;
+      }
+      -ms-overflow-style: none; /* IE 11 */
+      scrollbar-width: none; /* Firefox 64 */
+    }
+
+    .message1__footer {
+      height: 105px;
+      .alldel {
+        width: 160px;
+        height: 60px;
+        margin-left: 40px;
+        margin-top: 15px;
+        border: 1px solid #828282;
+        box-sizing: border-box;
+        border-radius: 10px;
+
+        font-family: Inter;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 0.02em;
+        color: #828282;
+        transition-property: background-color, box-shadow, border, color;
+        transition-duration: 0.3s;
+
+        &:hover {
+          border: none;
+          background: #21317a;
+          box-shadow: 0 15px 15px rgba(0, 0, 0, 0.15);
+          color: #ffffff;
+        }
+
+        &:active {
+          border: none;
+          background: #00082f;
+          box-shadow: 0 15px 15px rgba(0, 0, 0, 0.15);
+
+          #popup {
+            opacity: 0;
+            visibility: hidden;
+          }
+        }
+      }
+    }
+  }
+  &:target {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &:target .message1 {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+  }
+}
