@@ -101,19 +101,19 @@
       <!-- from tests -->
       <section style="display: flex; justify-content: start; flex-wrap: wrap;">
         <div class="msg-btn">
-          <a href="#popup1">message №1</a>
+          <a href="#popup1" style="background-color: #21317a; color: #ffffff;">message №1</a>
         </div>
         <div class="msg-btn">
-          <a href="#popup2">message №2</a>
+          <a href="#popup2" style="background-color: #21317a; color: #ffffff;">message №2</a>
         </div>
         <div class="msg-btn">
           <a href="#popup3">message №3</a>
         </div>
         <div class="msg-btn">
-          <a href="#popup4">message №4</a>
+          <a href="#popup4" style="background-color: #21317a; color: #ffffff;">message №4</a>
         </div>
         <div class="msg-btn">
-          <a href="#popup5">message №5</a>
+          <a href="#popup5" style="background-color: #21317a; color: #ffffff;">message №5</a>
         </div>
         <div class="msg-btn">
           <a href="#popup6">message №6</a>
@@ -151,7 +151,7 @@
       </section>
       <!-- popup 1 -->
       <div id="popup1" class="popup">
-        <div class="popup__content">
+        <div class="popup__content message">
           <div class="popup__content-header">
             <p class="content__header-title">Сообщение</p>
             <a href="#section" class="popup__close">
@@ -334,8 +334,8 @@
         </div>
       </div>
       <!-- popup 2 -->
-      <div id="popup2" class="popup">
-        <div class="popup__content">
+      <div id="popup2" class="popup ">
+        <div class="popup__content message">
           <div class="popup__content-header">
             <p class="content__header-title">Сообщение2</p>
             <a href="#section" class="popup__close">
@@ -466,6 +466,44 @@
           </div>
           <div class="popup__content-footer">
             <button type="button" class="alldel">Удалить все</button>
+          </div>
+        </div>
+      </div>
+      <!-- popup 4 -->
+      <div id="popup4" class="popup ">
+        <div class="popup__content info">
+          <div class="popup__content-header">
+            <a href="#section" class="popup__close">
+              <img src="icons/close-icon.png" alt="close-icon" />
+            </a>
+          </div>
+          <div class="popup__content-items">
+              <div class="item">
+                <div class="item__description">
+                  <p class="item__description-text">
+                    Организация “ОООООО” успешно добавлена
+                  </p>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      <!-- popup 5 -->
+      <div id="popup5" class="popup ">
+        <div class="popup__content info">
+          <div class="popup__content-header">
+            <a href="#section" class="popup__close">
+              <img src="icons/close-icon.png" alt="close-icon" />
+            </a>
+          </div>
+          <div class="popup__content-items">
+              <div class="item">
+                <div class="item__description">
+                  <p class="item__description-text">
+                    Организация “ОООООО” успешно установлена по умолчанию
+                  </p>
+                </div>
+              </div>
           </div>
         </div>
       </div>
