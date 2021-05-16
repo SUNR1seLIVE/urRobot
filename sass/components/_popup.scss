@@ -4,17 +4,15 @@
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgba(0, 8, 47, 0.4);
   z-index: 9999;
   transition: all 0.5s;
   .popup__content {
-    background: #ffffff;
     box-shadow: 0 0 14px #0000003d, 0 14px 14px #0000001f;
     border-radius: 10px;
     overflow: hidden;
     opacity: 0;
-    transform: translate(0, 0) scale(0.25);
-    transition: all 0.5s 0.2s;
+    transform: scale(0.25);
+    transition: all 0.5s;
     .popup__content-header {
       height: 79px;
       display: flex;
@@ -23,13 +21,10 @@
         height: max-content;
         margin-left: 40px;
         margin-top: 30px;
-        font-family: Inter;
-        font-style: normal;
         font-weight: 600;
         font-size: 24px;
         line-height: 29px;
         letter-spacing: 0.03em;
-        color: #333333;
       }
       .popup__close {
         width: 15px;
@@ -49,8 +44,6 @@
         margin-top: 15px;
         box-sizing: border-box;
         border-radius: 10px;
-        font-family: Inter;
-        font-style: normal;
         font-weight: 500;
         font-size: 14px;
         line-height: 17px;
@@ -58,21 +51,13 @@
         transition-property: background-color, box-shadow, border, color;
         transition-duration: 0.3s;
         &:hover {
-          border: none;
           background: #21317a;
           box-shadow: 0 15px 15px rgba(0, 0, 0, 0.15);
-          color: #ffffff;
         }
         &:active {
-          border: none;
           background: #00082f;
           box-shadow: 0 15px 15px rgba(0, 0, 0, 0.15);
         }
-      }
-      .btn-bright {
-        background: #ffffff;
-        border: 1px solid #828282;
-        color: #828282;
       }
       .btn-dark {
         background: #21317a;
@@ -95,13 +80,9 @@
           align-items: center;
           transition: background 0.5s;
           .item__icon {
-            display: flex;
-            align-items: center;
-            justify-content: center;
             margin-right: 25px;
             width: 30px;
             height: 30px;
-            background: linear-gradient(180deg, #07d6c1 0%, #25b2d4 27.08%, #5080cd 70.31%, #6169bf 100%);
             border-radius: 10px;
           }
           .item__description {
@@ -113,17 +94,13 @@
             flex-direction: column;
             justify-content: space-between;
             flex: 1 0 30%;
-            font-family: Inter;
-            font-style: normal;
             font-weight: 500;
             letter-spacing: 0.04em;
             text-align: left;
-            color: #4f4f4f;
             .item__description-title {
               font-size: 16px;
               font-weight: 600;
               line-height: 19px;
-              color: #000000;
             }
             .item__description-text {
               font-size: 12px;
@@ -137,23 +114,11 @@
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
-
             font-size: 12px;
             line-height: 15px;
-            color: #4f4f4f;
-          }
-          &.selected {
-            background: rgba(56, 158, 224, 0.25);
-            .item__description {
-              color: #000000;
-            }
-            .item__time {
-              color: #000000;
-            }
           }
           &:hover {
             cursor: pointer;
-            background: rgba(56, 158, 224, 0.25);
           }
         }
         &::-webkit-scrollbar {
@@ -191,13 +156,9 @@
           justify-content: center;
           align-items: center;
           .item__description {
-            font-family: Inter;
-            font-style: normal;
             font-weight: 600;
             letter-spacing: 0;
             text-align: center;
-            color: #333333;
-
             .item__description-text {
               font-size: 18px;
               line-height: 22px;
@@ -234,16 +195,11 @@
             padding: 15px 10px;
             border: none;
             border-radius: 10px;
-            background: #e0e0e0;
-
-            font-family: Inter;
             font-size: 12px;
-            font-style: normal;
             font-weight: 500;
             line-height: 15px;
             letter-spacing: 0.04em;
             text-align: left;
-
             &:focus {
               outline: none;
             }
@@ -262,7 +218,6 @@
     }
   }
 }
-
 // Activated
 #popup1,
 #popup2,
@@ -278,10 +233,9 @@
   }
   &:target .popup__content {
     opacity: 1;
-    transform: translate(0, 0) scale(1);
+    transform: scale(1);
   }
 }
-
 #popup2 {
   .message {
     .popup__content-items {
@@ -291,5 +245,168 @@
         }
       }
     }
+  }
+}
+
+.light-theme {
+  .popup {
+    background-color: rgba(0, 8, 47, 0.4);
+    .popup__content {
+      background: #ffffff;
+      .popup__content-header {
+        .content__header-title {
+          color: #333333;
+        }
+      }
+      .popup__content-footer {
+        .btn {
+          &:hover {
+            border: none;
+            color: #ffffff;
+          }
+        }
+        .btn-bright {
+          border: 1px solid #828282;
+          color: #828282;
+        }
+      }
+      &.message {
+        .popup__content-items {
+          .item {
+            .item__icon {
+              background: url(../icons/message-icon_light.png);
+            }
+            .item__description {
+              color: #4f4f4f;
+              .item__description-title {
+                color: #000000;
+              }
+            }
+            .item__time {
+              color: #4f4f4f;
+            }
+            &.selected {
+              background: #cde7f7;
+              .item__description {
+                color: #000000;
+              }
+              .item__time {
+                color: #000000;
+              }
+            }
+            &:hover {
+              background: #cde7f7;
+            }
+          }
+        }
+      }
+      &.info {
+        .popup__content-items {
+          .item {
+            .item__description {
+              color: #333333;
+            }
+          }
+        }
+      }
+      &.add-company {
+        .popup__content-items {
+          .item {
+            .item__input {
+              background: #e0e0e0;
+              &::placeholder {color: #828282;}
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.dark-theme {
+  .popup {
+    background-color: rgba(0, 8, 47, 0.4);
+    .popup__content {
+      background: #231f20;
+      .popup__content-header {
+        .content__header-title {
+          color: #f2f2f2;
+        }
+      }
+      .popup__content-footer {
+        .btn {
+          &:hover {
+            border: none;
+            color: #f2f2f2;
+          }
+        }
+        .btn-bright {
+          border: 1px solid #f2f2f2;
+          color: #f2f2f2;
+        }
+      }
+      &.message {
+        .popup__content-items {
+          .item {
+            .item__icon {
+              background: url(../icons/message-icon_dark.png);
+            }
+            .item__description {
+              color: #e0e0e0;
+              .item__description-title {
+                color: #f2f2f2;
+              }
+            }
+            .item__time {
+              color: #e0e0e0;
+            }
+            &.selected {
+              background: #389EE040;
+              .item__description {
+                color: #f2f2f2;
+              }
+              .item__time {
+                color: #f2f2f2;
+              }
+            }
+            &:hover {
+              background: #389EE040;
+            }
+          }
+        }
+      }
+      &.info {
+        .popup__content-items {
+          .item {
+            .item__description {
+              color: #F2F2F2;
+            }
+          }
+        }
+      }
+      &.add-company {
+        .popup__content-items {
+          .item {
+            .item__input {
+              background: #4f4f4f;
+              &::placeholder {color: #F2F2F2;}
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// !ТОЛЬКО ДЛЯ ТЕСТОВ!!!!
+.light-theme{
+  #theme{
+    background-color: #ffffff;
+    color: #000000;
+  }
+}
+.dark-theme{
+  #theme{
+    background-color: #000000;
+    color: #ffffff;
   }
 }
