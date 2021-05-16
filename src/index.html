@@ -23,27 +23,27 @@
 
         <div class="header__info">
           <p class="header__info-number">132178469</p>
-          <p class="header__info-label">Вынесено решение</p>
+          <p class="header__info-div">Вынесено решение</p>
         </div>
 
         <div class="header__info">
           <p class="header__info-number">16537</p>
-          <p class="header__info-label">Подано в суд</p>
+          <p class="header__info-div">Подано в суд</p>
         </div>
 
         <div class="header__info">
           <p class="header__info-number">73648</p>
-          <p class="header__info-label">В работе</p>
+          <p class="header__info-div">В работе</p>
         </div>
 
         <div class="header__info">
           <p class="header__info-number">726487</p>
-          <p class="header__info-label">Новый</p>
+          <p class="header__info-div">Новый</p>
         </div>
 
         <div class="header__info">
           <p class="header__info-number">3142536</p>
-          <p class="header__info-label">Отозвано</p>
+          <p class="header__info-div">Отозвано</p>
         </div>
       </div>
 
@@ -96,31 +96,314 @@
       </div> -->
     </header>
 
-    <div id="section" style="width: 100vw; height: 830px; position: relative">
-      <section></section>
+    <div
+      id="section"
+      style="width: 100vw; height: 830px; position: relative; display: flex"
+    >
+      <section style="width: 70px">t</section>
       <!-- from tests -->
-      <section style="display: flex; justify-content: start; flex-wrap: wrap;">
-        <div class="msg-btn">
-          <a href="#popup1" style="background-color: #21317a; color: #ffffff;">message №1</a>
+      <section class="content" style=" width: 1850px;">
+        <div class="content__bg-color">
+        <div style="display: flex; justify-content: start; flex-wrap: wrap">
+          <div class="msg-btn">
+            <a href="#popup1" style="background-color: #21317a; color: #ffffff"
+              >message №1</a
+            >
+          </div>
+          <div class="msg-btn">
+            <a href="#popup2" style="background-color: #21317a; color: #ffffff"
+              >message №2</a
+            >
+          </div>
+          <div class="msg-btn">
+            <a href="#popup3" style="background-color: #21317a; color: #ffffff"
+              >message №3</a
+            >
+          </div>
+          <div class="msg-btn">
+            <a href="#popup4" style="background-color: #21317a; color: #ffffff"
+              >message №4</a
+            >
+          </div>
+          <div class="msg-btn">
+            <a href="#popup5" style="background-color: #21317a; color: #ffffff"
+              >message №5</a
+            >
+          </div>
+          <div class="msg-btn">
+            <a href="#popup6">message №6</a>
+          </div>
+          <div class="msg-btn">
+            <a id="theme" href="#">Светлая тема</a>
+          </div>
         </div>
-        <div class="msg-btn">
-          <a href="#popup2" style="background-color: #21317a; color: #ffffff;">message №2</a>
-        </div>
-        <div class="msg-btn">
-          <a href="#popup3" style="background-color: #21317a; color: #ffffff;">message №3</a>
-        </div>
-        <div class="msg-btn">
-          <a href="#popup4" style="background-color: #21317a; color: #ffffff;">message №4</a>
-        </div>
-        <div class="msg-btn">
-          <a href="#popup5" style="background-color: #21317a; color: #ffffff;">message №5</a>
-        </div>
-        <div class="msg-btn">
-          <a href="#popup6">message №6</a>
-        </div>
-        <div class="msg-btn">
-          <a id="theme" href="#">Светлая тема</a>
-        </div>
+        <div id="main-table-container" class="main-table-container">
+          <table class="main-table main-table__header">
+            <tr>
+              <th class="main-table__checked">
+                <div class="checkbox">
+                  <input
+                    id="main-table-select-all"
+                    class="checkbox-input"
+                    type="checkbox"
+                  />
+                  <label
+                  for="main-table-select-all"
+                  class="checkbox-label"
+                  ></label>
+                </div>
+              </th>
+              <th class="main-table__max-name">Полное наименование</th>
+              <th class="main-table__min-name">Сокращённое наименование</th>
+              <th class="main-table__inn">ИНН</th>
+              <th class="main-table__address">Юридический адрес</th>
+            </tr>
+          </table>
+          <div class="main-table__items-container">
+            <table id="main-table__items" class="main-table main-table__items">
+              <tr class="main-table__item">
+                <td class="main-table__checked">
+                  <div class="checkbox">
+                    <input
+                      id="main-item1"
+                      class="checkbox-input"
+                      type="checkbox"
+                    />
+                    <label
+                    for="main-item1"
+                    class="checkbox-label"
+                    ></label>
+                  </div>
+                </td>
+                <td class="main-table__max-name">
+                  МУНИЦИПАЛЬНОЕ ПРЕДПРИЯТИЕ ГОРОДСКОГО ПОСЕЛЕНИЯ ЩЁЛКОВО
+                  "ДИРЕКЦИЯ ЕДИНОГО ЗАКАЗЧИКА ЖИЛИЩНО-КОММУНАЛЬНОГО ХОЗЯЙСТВА"
+                </td>
+                <td class="main-table__min-name">МП ГПЩ "ДЕЗ ЖКХ"</td>
+                <td class="main-table__inn">1122333334</td>
+                <td class="main-table__address">
+                  141108, обл. Московская, г. Щелково, ул. Краснознаменская, д.3
+                </td>
+              </tr>
+              <tr class="main-table__item">
+                <td class="main-table__checked">
+                  <div class="checkbox">
+                    <input
+                      id="main-item2"
+                      class="checkbox-input"
+                      type="checkbox"
+                    />
+                    <label
+                    for="main-item2"
+                    class="checkbox-label"
+                    ></label>
+                  </div>
+                </td>
+                <td class="main-table__max-name">
+                  МУНИЦИПАЛЬНОЕ ПРЕДПРИЯТИЕ ГОРОДСКОГО ПОСЕЛЕНИЯ ЩЁЛКОВО
+                  "ДИРЕКЦИЯ ЕДИНОГО ЗАКАЗЧИКА ЖИЛИЩНО-КОММУНАЛЬНОГО ХОЗЯЙСТВА"
+                </td>
+                <td class="main-table__min-name">МП ГПЩ "ДЕЗ ЖКХ"</td>
+                <td class="main-table__inn">1122333334</td>
+                <td class="main-table__address">
+                  141108, обл. Московская, г. Щелково, ул. Краснознаменская, д.3
+                </td>
+              </tr>
+              <tr class="main-table__item">
+                <td class="main-table__checked">
+                  <div class="checkbox">
+                    <input
+                      id="main-item3"
+                      class="checkbox-input"
+                      type="checkbox"
+                    />
+                    <label
+                    for="main-item3"
+                    class="checkbox-label"
+                    ></label>
+                  </div>
+                </td>
+                <td class="main-table__max-name">
+                  МУНИЦИПАЛЬНОЕ ПРЕДПРИЯТИЕ ГОРОДСКОГО ПОСЕЛЕНИЯ ЩЁЛКОВО
+                  "ДИРЕКЦИЯ ЕДИНОГО ЗАКАЗЧИКА ЖИЛИЩНО-КОММУНАЛЬНОГО ХОЗЯЙСТВА"
+                </td>
+                <td class="main-table__min-name">МП ГПЩ "ДЕЗ ЖКХ"</td>
+                <td class="main-table__inn">1122333334</td>
+                <td class="main-table__address">
+                  141108, обл. Московская, г. Щелково, ул. Краснознаменская, д.3
+                </td>
+              </tr>
+              <tr class="main-table__item">
+                <td class="main-table__checked">
+                  <div class="checkbox">
+                    <input
+                      id="main-item4"
+                      class="checkbox-input"
+                      type="checkbox"
+                    />
+                    <label
+                    for="main-item4"
+                    class="checkbox-label"
+                    ></label>
+                  </div>
+                </td>
+                <td class="main-table__max-name">
+                  МУНИЦИПАЛЬНОЕ ПРЕДПРИЯТИЕ ГОРОДСКОГО ПОСЕЛЕНИЯ ЩЁЛКОВО
+                  "ДИРЕКЦИЯ ЕДИНОГО ЗАКАЗЧИКА ЖИЛИЩНО-КОММУНАЛЬНОГО ХОЗЯЙСТВА"
+                </td>
+                <td class="main-table__min-name">МП ГПЩ "ДЕЗ ЖКХ"</td>
+                <td class="main-table__inn">1122333334</td>
+                <td class="main-table__address">
+                  141108, обл. Московская, г. Щелково, ул. Краснознаменская, д.3
+                </td>
+              </tr>
+              <tr class="main-table__item">
+                <td class="main-table__checked">
+                  <div class="checkbox">
+                    <input
+                      id="main-item5"
+                      class="checkbox-input"
+                      type="checkbox"
+                    />
+                    <label
+                    for="main-item5"
+                    class="checkbox-label"
+                    ></label>
+                  </div>
+                </td>
+                <td class="main-table__max-name">
+                  МУНИЦИПАЛЬНОЕ ПРЕДПРИЯТИЕ ГОРОДСКОГО ПОСЕЛЕНИЯ ЩЁЛКОВО
+                  "ДИРЕКЦИЯ ЕДИНОГО ЗАКАЗЧИКА ЖИЛИЩНО-КОММУНАЛЬНОГО ХОЗЯЙСТВА"
+                </td>
+                <td class="main-table__min-name">МП ГПЩ "ДЕЗ ЖКХ"</td>
+                <td class="main-table__inn">1122333334</td>
+                <td class="main-table__address">
+                  141108, обл. Московская, г. Щелково, ул. Краснознаменская, д.3
+                </td>
+              </tr>
+              <tr class="main-table__item">
+                <td class="main-table__checked">
+                  <div class="checkbox">
+                    <input
+                      id="main-item6"
+                      class="checkbox-input"
+                      type="checkbox"
+                    />
+                    <label
+                    for="main-item6"
+                    class="checkbox-label"
+                    ></label>
+                  </div>
+                </td>
+                <td class="main-table__max-name">
+                  МУНИЦИПАЛЬНОЕ ПРЕДПРИЯТИЕ ГОРОДСКОГО ПОСЕЛЕНИЯ ЩЁЛКОВО
+                  "ДИРЕКЦИЯ ЕДИНОГО ЗАКАЗЧИКА ЖИЛИЩНО-КОММУНАЛЬНОГО ХОЗЯЙСТВА"
+                </td>
+                <td class="main-table__min-name">МП ГПЩ "ДЕЗ ЖКХ"</td>
+                <td class="main-table__inn">1122333334</td>
+                <td class="main-table__address">
+                  141108, обл. Московская, г. Щелково, ул. Краснознаменская, д.3
+                </td>
+              </tr>
+              <tr class="main-table__item">
+                <td class="main-table__checked">
+                  <div class="checkbox">
+                    <input
+                      id="main-item7"
+                      class="checkbox-input"
+                      type="checkbox"
+                    />
+                    <label
+                    for="main-item7"
+                    class="checkbox-label"
+                    ></label>
+                  </div>
+                </td>
+                <td class="main-table__max-name">
+                  МУНИЦИПАЛЬНОЕ ПРЕДПРИЯТИЕ ГОРОДСКОГО ПОСЕЛЕНИЯ ЩЁЛКОВО
+                  "ДИРЕКЦИЯ ЕДИНОГО ЗАКАЗЧИКА ЖИЛИЩНО-КОММУНАЛЬНОГО ХОЗЯЙСТВА"
+                </td>
+                <td class="main-table__min-name">МП ГПЩ "ДЕЗ ЖКХ"</td>
+                <td class="main-table__inn">1122333334</td>
+                <td class="main-table__address">
+                  141108, обл. Московская, г. Щелково, ул. Краснознаменская, д.3
+                </td>
+              </tr>
+              <tr class="main-table__item">
+                <td class="main-table__checked">
+                  <div class="checkbox">
+                    <input
+                      id="main-item8"
+                      class="checkbox-input"
+                      type="checkbox"
+                    />
+                    <label
+                    for="main-item8"
+                    class="checkbox-label"
+                    ></label>
+                  </div>
+                </td>
+                <td class="main-table__max-name">
+                  МУНИЦИПАЛЬНОЕ ПРЕДПРИЯТИЕ ГОРОДСКОГО ПОСЕЛЕНИЯ ЩЁЛКОВО
+                  "ДИРЕКЦИЯ ЕДИНОГО ЗАКАЗЧИКА ЖИЛИЩНО-КОММУНАЛЬНОГО ХОЗЯЙСТВА"
+                </td>
+                <td class="main-table__min-name">МП ГПЩ "ДЕЗ ЖКХ"</td>
+                <td class="main-table__inn">1122333334</td>
+                <td class="main-table__address">
+                  141108, обл. Московская, г. Щелково, ул. Краснознаменская, д.3
+                </td>
+              </tr>
+              <tr class="main-table__item">
+                <td class="main-table__checked">
+                  <div class="checkbox">
+                    <input
+                      id="main-item9"
+                      class="checkbox-input"
+                      type="checkbox"
+                    />
+                    <label
+                    for="main-item9"
+                    class="checkbox-label"
+                    ></label>
+                  </div>
+                </td>
+                <td class="main-table__max-name">
+                  МУНИЦИПАЛЬНОЕ ПРЕДПРИЯТИЕ ГОРОДСКОГО ПОСЕЛЕНИЯ ЩЁЛКОВО
+                  "ДИРЕКЦИЯ ЕДИНОГО ЗАКАЗЧИКА ЖИЛИЩНО-КОММУНАЛЬНОГО ХОЗЯЙСТВА"
+                </td>
+                <td class="main-table__min-name">МП ГПЩ "ДЕЗ ЖКХ"</td>
+                <td class="main-table__inn">1122333334</td>
+                <td class="main-table__address">
+                  141108, обл. Московская, г. Щелково, ул. Краснознаменская, д.3
+                </td>
+              </tr>
+              <tr class="main-table__item">
+                <td class="main-table__checked">
+                  <div class="checkbox">
+                    <input
+                      id="main-item10"
+                      class="checkbox-input"
+                      type="checkbox"
+                    />
+                    <label
+                    for="main-item10"
+                    class="checkbox-label"
+                    ></label>
+                  </div>
+                </td>
+                <td class="main-table__max-name">
+                  МУНИЦИПАЛЬНОЕ ПРЕДПРИЯТИЕ ГОРОДСКОГО ПОСЕЛЕНИЯ ЩЁЛКОВО
+                  "ДИРЕКЦИЯ ЕДИНОГО ЗАКАЗЧИКА ЖИЛИЩНО-КОММУНАЛЬНОГО ХОЗЯЙСТВА"
+                </td>
+                <td class="main-table__min-name">МП ГПЩ "ДЕЗ ЖКХ"</td>
+                <td class="main-table__inn">1122333334</td>
+                <td class="main-table__address">
+                  141108, обл. Московская, г. Щелково, ул. Краснознаменская, д.3
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div></div>
       </section>
       <!-- popup 1 -->
       <div id="popup1" class="popup">
@@ -132,150 +415,150 @@
             </a>
           </div>
           <div class="popup__content-items">
-              <div class="item selected">
-                <div class="item__icon"></div>
-                <div class="item__description">
-                  <p class="item__description-title">ЮРРОБОТ</p>
-                  <p class="item__description-text">
-                    Кузовенковой Л.Н выставлен счет на оплату
-                  </p>
-                </div>
-                <div class="item__time">
-                  <p>19.01.1970 08:39</p>
-                </div>
+            <div class="item selected">
+              <div class="item__icon"></div>
+              <div class="item__description">
+                <p class="item__description-title">ЮРРОБОТ</p>
+                <p class="item__description-text">
+                  Кузовенковой Л.Н выставлен счет на оплату
+                </p>
               </div>
-              <div class="item">
-                <div class="item__icon"></div>
-                <div class="item__description">
-                  <p class="item__description-title">ЮРРОБОТ</p>
-                  <p class="item__description-text">
-                    Кузовенковой Л.Н выставлен счет на оплату
-                  </p>
-                </div>
-                <div class="item__time">
-                  <p>19.01.1970 08:39</p>
-                </div>
+              <div class="item__time">
+                <p>19.01.1970 08:39</p>
               </div>
-              <div class="item">
-                <div class="item__icon"></div>
-                <div class="item__description">
-                  <p class="item__description-title">ЮРРОБОТ</p>
-                  <p class="item__description-text">
-                    Кузовенковой Л.Н выставлен счет на оплату
-                  </p>
-                </div>
-                <div class="item__time">
-                  <p>19.01.1970 08:39</p>
-                </div>
+            </div>
+            <div class="item">
+              <div class="item__icon"></div>
+              <div class="item__description">
+                <p class="item__description-title">ЮРРОБОТ</p>
+                <p class="item__description-text">
+                  Кузовенковой Л.Н выставлен счет на оплату
+                </p>
               </div>
-              <div class="item">
-                <div class="item__icon"></div>
-                <div class="item__description">
-                  <p class="item__description-title">ЮРРОБОТ</p>
-                  <p class="item__description-text">
-                    Кузовенковой Л.Н выставлен счет на оплату
-                  </p>
-                </div>
-                <div class="item__time">
-                  <p>19.01.1970 08:39</p>
-                </div>
+              <div class="item__time">
+                <p>19.01.1970 08:39</p>
               </div>
-              <div class="item selected">
-                <div class="item__icon"></div>
-                <div class="item__description">
-                  <p class="item__description-title">ЮРРОБОТ</p>
-                  <p class="item__description-text">
-                    Кузовенковой Л.Н выставлен счет на оплату
-                  </p>
-                </div>
-                <div class="item__time">
-                  <p>19.01.1970 08:39</p>
-                </div>
+            </div>
+            <div class="item">
+              <div class="item__icon"></div>
+              <div class="item__description">
+                <p class="item__description-title">ЮРРОБОТ</p>
+                <p class="item__description-text">
+                  Кузовенковой Л.Н выставлен счет на оплату
+                </p>
               </div>
-              <div class="item">
-                <div class="item__icon"></div>
-                <div class="item__description">
-                  <p class="item__description-title">ЮРРОБОТ</p>
-                  <p class="item__description-text">
-                    Кузовенковой Л.Н выставлен счет на оплату
-                  </p>
-                </div>
-                <div class="item__time">
-                  <p>19.01.1970 08:39</p>
-                </div>
+              <div class="item__time">
+                <p>19.01.1970 08:39</p>
               </div>
-              <div class="item">
-                <div class="item__icon"></div>
-                <div class="item__description">
-                  <p class="item__description-title">ЮРРОБОТ</p>
-                  <p class="item__description-text">
-                    Кузовенковой Л.Н выставлен счет на оплату
-                  </p>
-                </div>
-                <div class="item__time">
-                  <p>19.01.1970 08:39</p>
-                </div>
+            </div>
+            <div class="item">
+              <div class="item__icon"></div>
+              <div class="item__description">
+                <p class="item__description-title">ЮРРОБОТ</p>
+                <p class="item__description-text">
+                  Кузовенковой Л.Н выставлен счет на оплату
+                </p>
               </div>
-              <div class="item">
-                <div class="item__icon"></div>
-                <div class="item__description">
-                  <p class="item__description-title">ЮРРОБОТ</p>
-                  <p class="item__description-text">
-                    Кузовенковой Л.Н выставлен счет на оплату
-                  </p>
-                </div>
-                <div class="item__time">
-                  <p>19.01.1970 08:39</p>
-                </div>
+              <div class="item__time">
+                <p>19.01.1970 08:39</p>
               </div>
-              <div class="item selected">
-                <div class="item__icon"></div>
-                <div class="item__description">
-                  <p class="item__description-title">ЮРРОБОТ</p>
-                  <p class="item__description-text">
-                    Кузовенковой Л.Н выставлен счет на оплату
-                  </p>
-                </div>
-                <div class="item__time">
-                  <p>19.01.1970 08:39</p>
-                </div>
+            </div>
+            <div class="item selected">
+              <div class="item__icon"></div>
+              <div class="item__description">
+                <p class="item__description-title">ЮРРОБОТ</p>
+                <p class="item__description-text">
+                  Кузовенковой Л.Н выставлен счет на оплату
+                </p>
               </div>
-              <div class="item">
-                <div class="item__icon"></div>
-                <div class="item__description">
-                  <p class="item__description-title">ЮРРОБОТ</p>
-                  <p class="item__description-text">
-                    Кузовенковой Л.Н выставлен счет на оплату
-                  </p>
-                </div>
-                <div class="item__time">
-                  <p>19.01.1970 08:39</p>
-                </div>
+              <div class="item__time">
+                <p>19.01.1970 08:39</p>
               </div>
-              <div class="item">
-                <div class="item__icon"></div>
-                <div class="item__description">
-                  <p class="item__description-title">ЮРРОБОТ</p>
-                  <p class="item__description-text">
-                    Кузовенковой Л.Н выставлен счет на оплату
-                  </p>
-                </div>
-                <div class="item__time">
-                  <p>19.01.1970 08:39</p>
-                </div>
+            </div>
+            <div class="item">
+              <div class="item__icon"></div>
+              <div class="item__description">
+                <p class="item__description-title">ЮРРОБОТ</p>
+                <p class="item__description-text">
+                  Кузовенковой Л.Н выставлен счет на оплату
+                </p>
               </div>
-              <div class="item">
-                <div class="item__icon"></div>
-                <div class="item__description">
-                  <p class="item__description-title">ЮРРОБОТ</p>
-                  <p class="item__description-text">
-                    Кузовенковой Л.Н выставлен счет на оплату
-                  </p>
-                </div>
-                <div class="item__time">
-                  <p>19.01.1970 08:39</p>
-                </div>
+              <div class="item__time">
+                <p>19.01.1970 08:39</p>
               </div>
+            </div>
+            <div class="item">
+              <div class="item__icon"></div>
+              <div class="item__description">
+                <p class="item__description-title">ЮРРОБОТ</p>
+                <p class="item__description-text">
+                  Кузовенковой Л.Н выставлен счет на оплату
+                </p>
+              </div>
+              <div class="item__time">
+                <p>19.01.1970 08:39</p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="item__icon"></div>
+              <div class="item__description">
+                <p class="item__description-title">ЮРРОБОТ</p>
+                <p class="item__description-text">
+                  Кузовенковой Л.Н выставлен счет на оплату
+                </p>
+              </div>
+              <div class="item__time">
+                <p>19.01.1970 08:39</p>
+              </div>
+            </div>
+            <div class="item selected">
+              <div class="item__icon"></div>
+              <div class="item__description">
+                <p class="item__description-title">ЮРРОБОТ</p>
+                <p class="item__description-text">
+                  Кузовенковой Л.Н выставлен счет на оплату
+                </p>
+              </div>
+              <div class="item__time">
+                <p>19.01.1970 08:39</p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="item__icon"></div>
+              <div class="item__description">
+                <p class="item__description-title">ЮРРОБОТ</p>
+                <p class="item__description-text">
+                  Кузовенковой Л.Н выставлен счет на оплату
+                </p>
+              </div>
+              <div class="item__time">
+                <p>19.01.1970 08:39</p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="item__icon"></div>
+              <div class="item__description">
+                <p class="item__description-title">ЮРРОБОТ</p>
+                <p class="item__description-text">
+                  Кузовенковой Л.Н выставлен счет на оплату
+                </p>
+              </div>
+              <div class="item__time">
+                <p>19.01.1970 08:39</p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="item__icon"></div>
+              <div class="item__description">
+                <p class="item__description-title">ЮРРОБОТ</p>
+                <p class="item__description-text">
+                  Кузовенковой Л.Н выставлен счет на оплату
+                </p>
+              </div>
+              <div class="item__time">
+                <p>19.01.1970 08:39</p>
+              </div>
+            </div>
           </div>
           <div class="popup__content-footer">
             <button type="button" class="btn btn-bright">Удалить все</button>
@@ -292,102 +575,102 @@
             </a>
           </div>
           <div class="popup__content-items">
-              <div class="item selected">
-                <div class="item__icon"></div>
-                <div class="item__description">
-                  <p class="item__description-text">
-                    Подписание судебного приказа по ЭЦП
-                  </p>
-                </div>
+            <div class="item selected">
+              <div class="item__icon"></div>
+              <div class="item__description">
+                <p class="item__description-text">
+                  Подписание судебного приказа по ЭЦП
+                </p>
               </div>
-              <div class="item">
-                <div class="item__icon"></div>
-                <div class="item__description">
-                  <p class="item__description-text">
-                    Подписание судебного приказа по ЭЦП
-                  </p>
-                </div>
+            </div>
+            <div class="item">
+              <div class="item__icon"></div>
+              <div class="item__description">
+                <p class="item__description-text">
+                  Подписание судебного приказа по ЭЦП
+                </p>
               </div>
-              <div class="item">
-                <div class="item__icon"></div>
-                <div class="item__description">
-                  <p class="item__description-text">
-                    Подписание судебного приказа по ЭЦП
-                  </p>
-                </div>
+            </div>
+            <div class="item">
+              <div class="item__icon"></div>
+              <div class="item__description">
+                <p class="item__description-text">
+                  Подписание судебного приказа по ЭЦП
+                </p>
               </div>
-              <div class="item">
-                <div class="item__icon"></div>
-                <div class="item__description">
-                  <p class="item__description-text">
-                    Подписание судебного приказа по ЭЦП
-                  </p>
-                </div>
+            </div>
+            <div class="item">
+              <div class="item__icon"></div>
+              <div class="item__description">
+                <p class="item__description-text">
+                  Подписание судебного приказа по ЭЦП
+                </p>
               </div>
-              <div class="item selected">
-                <div class="item__icon"></div>
-                <div class="item__description">
-                  <p class="item__description-text">
-                    Подписание судебного приказа по ЭЦП
-                  </p>
-                </div>
+            </div>
+            <div class="item selected">
+              <div class="item__icon"></div>
+              <div class="item__description">
+                <p class="item__description-text">
+                  Подписание судебного приказа по ЭЦП
+                </p>
               </div>
-              <div class="item">
-                <div class="item__icon"></div>
-                <div class="item__description">
-                  <p class="item__description-text">
-                    Подписание судебного приказа по ЭЦП
-                  </p>
-                </div>
+            </div>
+            <div class="item">
+              <div class="item__icon"></div>
+              <div class="item__description">
+                <p class="item__description-text">
+                  Подписание судебного приказа по ЭЦП
+                </p>
               </div>
-              <div class="item">
-                <div class="item__icon"></div>
-                <div class="item__description">
-                  <p class="item__description-text">
-                    Подписание судебного приказа по ЭЦП
-                  </p>
-                </div>
+            </div>
+            <div class="item">
+              <div class="item__icon"></div>
+              <div class="item__description">
+                <p class="item__description-text">
+                  Подписание судебного приказа по ЭЦП
+                </p>
               </div>
-              <div class="item">
-                <div class="item__icon"></div>
-                <div class="item__description">
-                  <p class="item__description-text">
-                    Подписание судебного приказа по ЭЦП
-                  </p>
-                </div>
+            </div>
+            <div class="item">
+              <div class="item__icon"></div>
+              <div class="item__description">
+                <p class="item__description-text">
+                  Подписание судебного приказа по ЭЦП
+                </p>
               </div>
-              <div class="item selected">
-                <div class="item__icon"></div>
-                <div class="item__description">
-                  <p class="item__description-text">
-                    Подписание судебного приказа по ЭЦП
-                  </p>
-                </div>
+            </div>
+            <div class="item selected">
+              <div class="item__icon"></div>
+              <div class="item__description">
+                <p class="item__description-text">
+                  Подписание судебного приказа по ЭЦП
+                </p>
               </div>
-              <div class="item">
-                <div class="item__icon"></div>
-                <div class="item__description">
-                  <p class="item__description-text">
-                    Подписание судебного приказа по ЭЦП
-                  </p>
-                </div>
+            </div>
+            <div class="item">
+              <div class="item__icon"></div>
+              <div class="item__description">
+                <p class="item__description-text">
+                  Подписание судебного приказа по ЭЦП
+                </p>
               </div>
-              <div class="item">
-                <div class="item__icon"></div>
-                <div class="item__description">
-                  <p class="item__description-text">
-                    Подписание судебного приказа по ЭЦП
-                  </p>
-                </div>
+            </div>
+            <div class="item">
+              <div class="item__icon"></div>
+              <div class="item__description">
+                <p class="item__description-text">
+                  Подписание судебного приказа по ЭЦП
+                </p>
               </div>
-              <div class="item">
-                <div class="item__icon"></div>
-                <div class="item__description">
-                  <p class="item__description-text">
-                    Подписание судебного приказа по ЭЦП
-                  </p>
-                </div>
+            </div>
+            <div class="item">
+              <div class="item__icon"></div>
+              <div class="item__description">
+                <p class="item__description-text">
+                  Подписание судебного приказа по ЭЦП
+                </p>
               </div>
+            </div>
           </div>
           <div class="popup__content-footer">
             <button type="button" class="btn btn-bright">Удалить все</button>
@@ -404,13 +687,13 @@
             </a>
           </div>
           <div class="popup__content-items">
-              <div class="item">
-                <input
+            <div class="item">
+              <input
                 type="text"
                 class="item__input"
                 placeholder="Введите ИНН новой компании"
-                >
-              </div>
+              />
+            </div>
           </div>
           <div class="popup__content-footer">
             <a href="#section" class="btn btn-bright">Отменить</a>
@@ -427,13 +710,13 @@
             </a>
           </div>
           <div class="popup__content-items">
-              <div class="item">
-                <div class="item__description">
-                  <p class="item__description-text">
-                    Организация “ОООООО” успешно добавлена
-                  </p>
-                </div>
+            <div class="item">
+              <div class="item__description">
+                <p class="item__description-text">
+                  Организация “ОООООО” успешно добавлена
+                </p>
               </div>
+            </div>
           </div>
         </div>
       </div>
@@ -446,13 +729,13 @@
             </a>
           </div>
           <div class="popup__content-items">
-              <div class="item">
-                <div class="item__description">
-                  <p class="item__description-text">
-                    Организация “ОООООО” успешно установлена по умолчанию
-                  </p>
-                </div>
+            <div class="item">
+              <div class="item__description">
+                <p class="item__description-text">
+                  Организация “ОООООО” успешно установлена по умолчанию
+                </p>
               </div>
+            </div>
           </div>
         </div>
       </div>
