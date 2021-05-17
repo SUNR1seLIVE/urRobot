@@ -25,16 +25,24 @@
     if (check_all_rows.checked) {
       for (let input of inputs) {
         input.checked = true;
+          input.parentElement.parentElement.parentElement.children[5].children[0].className = 'item__edit-block edit-block-hidden';
       }
     } else {
       for (let input of inputs) {
         input.checked = false;
+          input.parentElement.parentElement.parentElement.children[5].children[0].className = 'item__edit-block';
       }
     }
   })
 
   for (let input of inputs) {
     input.addEventListener('change', () => {
+
+      if(input.checked){
+        input.parentElement.parentElement.parentElement.children[5].children[0].className = 'item__edit-block edit-block-hidden';
+      }else{
+        input.parentElement.parentElement.parentElement.children[5].children[0].className = 'item__edit-block';
+      }
 
       if (!input.checked) {
         if (check_all_rows.checked) {
@@ -100,6 +108,23 @@
       });
     }
   });
+  //#endregion
+
+  
+  //#region // ! обработка клика по кнопке открытия онка
+  function renderPopup(id){
+    return location.href = id;
+  }
+  //#endregion
+  //#region // ! обработка клика по кнопке скрытия строки таблицы
+  function hiddenRowTable(btn){
+    btn.parentElement.parentElement.parentElement.style.display = 'none';
+  }
+  //#endregion
+  //#region // ! обработка клика по кнопке удаления строки таблицы
+  function removeRowTable(btn){
+    btn.parentElement.parentElement.parentElement.remove();
+  }
   //#endregion
 
   //#region // ! ТОЛЬКО ДЛЯ ТЕСТОВ

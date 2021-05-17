@@ -99,9 +99,6 @@
     background: #b8d7eb;
     border-radius: 10px 10px 0 0;
     color: #333333;
-    th{
-      position: relative;
-    }
     .main-table__checked {
       .checkbox {
         .checkbox-label::before {
@@ -130,11 +127,9 @@
       font-weight: 600;
       line-height: 19px;
     }
-
     .sort-up::after,
     .sort-down::after {
       position: absolute;
-      // left: 100%;
       top: calc(50% - 7.5px);
       z-index: 3;
       width: 15px;
@@ -152,11 +147,68 @@
     .sort-down::after {
       transform: rotate(0deg);
     }
+    th{
+      position: relative;
+    }
   }
   .main-table__items {
     margin-top: 40px;
     .main-table__item {
       height: 95px;
+
+      &.hidden__item{
+        display: none;
+      }
+      
+      .item__edit{
+        width: 0;
+        position: relative;
+        .item__edit-block{
+          width: 30px;
+          height: 80px;
+          padding: 5px 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+
+          background: #FFFFFF;
+          box-shadow: 0 15px 15px rgba(0, 0, 0, 0.15);
+          border-radius: 10px;
+
+          position: absolute;
+          top: -28px;
+          left: -60px;
+
+          visibility: hidden;
+          opacity: 0;
+          transform: scale(0.25);
+          transition: all 0.5s;
+          &.edit-block-hidden{
+            visibility: visible;
+            opacity: 1;
+            transform: scale(1);
+          }
+
+          .edit-block__btn{
+            width: 15px;
+            height: 15px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            &.btn-item-hidden{
+              background-image: url(../icons/eye_1.png);
+            }
+            &.btn-item-edit{
+              background-image: url(../icons/pencil_1.png);
+            }
+            &.btn-item-remove{
+              background-image: url(../icons/cancel_2.png);
+            }
+          }
+        }
+      }
+
+
       td {
         height: inherit;
         vertical-align: top;
