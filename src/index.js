@@ -196,3 +196,16 @@ function removeRowTable(btn) {
   btn.parentElement.parentElement.parentElement.remove();
 }
 //#endregion
+
+
+(function () {
+  const search = document.getElementsByClassName('search')[0];
+  const searchBox = document.getElementsByClassName('search-box')[0];
+
+  //#region // ! Включение/выключение строки поиска в таблице
+  search.addEventListener('click', () => {
+    searchBox.classList.toggle('active-search-box');
+  });
+  //#endregion
+  
+})();
