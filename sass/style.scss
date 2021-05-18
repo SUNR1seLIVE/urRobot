@@ -3,25 +3,16 @@
 @import "abstracts/variables";
 @import "abstracts/functions";
 
-@import "base/animations";
 @import "base/base";
 @import "base/typography";
-@import "base/utilities";
 
-@import "components/bg-video";
 @import "components/button";
-@import "components/card";
-@import "components/composition";
-@import "components/feature-box";
-@import "components/form";
 @import "components/popup";
-@import "components/story";
 @import "components/main-table";
-@import "components/from-tests";
+@import "components/sidebar-360";
 
-@import "layout/footer";
-@import "layout/grid";
 @import "layout/header";
-@import "layout/navigation";
+@import "layout/sidebar";
+@import "layout/content";
 
 @import "pages/home";

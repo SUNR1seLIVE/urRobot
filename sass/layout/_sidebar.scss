@@ -1,0 +1,142 @@
+.sidebar {
+  width: 280px;
+  height: 100%;
+  box-shadow: 0 9px 18px rgba(0, 0, 0, 0.18),
+    0 5.5px 5px rgba(0, 0, 0, 0.237602);
+  padding: 10px 0 40px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media only screen and (max-width: 1100px) {
+    width: 58px;
+    padding-left: 17px;
+  }
+
+  @media only screen and (max-width: 360px) {
+    display: none;
+  }
+
+  &.minSidebar {
+    width: 70px;
+    padding-left: 20px;
+
+    .sidebar__footer {
+      display: none;
+    }
+  }
+
+  .sidebar__item {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    .sidebar__item-img {
+      margin-right: 20px;
+      // display: flex;
+      // justify-content: center;
+      // align-items: center;
+      width: 25px;
+      height: 25px;
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      // &.activeSidebar {
+      //   font-weight: 600;
+      // }
+
+      @media only screen and (max-width: 1100px) {
+        margin-right: 0;
+      }
+    }
+
+    .img1 {
+      background-image: url("../icons/Category.png");
+    }
+
+    .img2 {
+      background-image: url("../icons/3_User.png");
+    }
+
+    .img3 {
+      background-image: url("../icons/Category.png");
+    }
+
+    .img4 {
+      background-image: url("../icons/Category.png");
+    }
+
+    .img5 {
+      background-image: url("../icons/Category.png");
+    }
+
+    .sidebar__item-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 17px;
+      letter-spacing: 0.04em;
+
+      @media only screen and (max-width: 1100px) {
+        display: none;
+      }
+
+      &.activeSidebar {
+        font-weight: 600;
+      }
+
+      &.changeBtnSidebar {
+        display: none;
+      }
+    }
+  }
+
+  .sidebar__footer {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0.04em;
+    text-align: left;
+    color: #828282;
+
+    @media only screen and (max-width: 1100px) {
+      display: none;
+    }
+  }
+}
+
+.light-theme {
+  .sidebar {
+    background-color: #fafafa;
+
+    .sidebar__item {
+      .sidebar__item-btn {
+        color: #4f4f4f;
+
+        &.activeSidebar {
+          color: #21317a;
+        }
+      }
+    }
+  }
+}
+
+.dark-theme {
+  .sidebar {
+    background-color: #00082f;
+
+    .sidebar__item {
+      .sidebar__item-btn {
+        color: #bdbdbd;
+
+        &.activeSidebar {
+          color: #ffffff;
+        }
+      }
+    }
+  }
+}

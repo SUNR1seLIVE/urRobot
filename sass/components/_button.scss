@@ -1,1 +1,107 @@
+.btn {
+  width: 160px;
+  height: 60px;
+  margin-top: 15px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.02em;
+  transition-property: background-color, box-shadow, border, color;
+  transition-duration: 0.3s;
 
+  &:hover {
+    border: none;
+    background: #21317a;
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.15);
+  }
+
+  &:active {
+    border: none;
+    background: #00082f;
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.btn-dark {
+  background: #21317a;
+  color: #ffffff;
+}
+
+.btn {
+  &:hover {
+    color: #ffffff;
+  }
+}
+
+.btn-bright {
+  border: 1px solid #828282;
+  color: #828282;
+}
+
+.btn {
+  &:hover {
+    color: #f2f2f2;
+  }
+}
+
+.btn-bright {
+  border: 1px solid #f2f2f2;
+  color: #f2f2f2;
+}
+
+.btn-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
+  height: 60px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  transition-property: background-color, box-shadow, border, color;
+  transition-duration: 0.3s;
+
+  @media only screen and (max-width: 1280px) {
+    height: 50px;
+  }
+}
+
+.btn-body-dark {
+  background-color: #21317a;
+  color: #ffffff;
+  margin-right: 30px;
+
+  @media only screen and (max-width: 360px) {
+    margin-right: 0;
+  }
+
+  &:hover {
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.15);
+  }
+
+  &:active {
+    background-color: #00082f;
+  }
+}
+
+.btn-body-bridht {
+  background-color: transparent;
+  color: #000000;
+  border: 1px solid #828282;
+
+  &:hover {
+    background-color: #21317a;
+    color: #ffffff;
+    border: none;
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.15);
+  }
+
+  &:active {
+    background-color: #00082f;
+  }
+}

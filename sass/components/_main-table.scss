@@ -1,21 +1,30 @@
 #main-table-container {
   display: block;
-  width: 1480px;
+  width: 100%;
   max-height: 557px;
-  margin: 20px auto auto;
+  margin-top: 20px;
+
+  @media only screen and (max-width: 360px) {
+    max-height: 340px;
+    width: 100vw;
+  }
+
   .main-table {
     width: 100%;
     border-collapse: collapse;
     border-spacing: 0;
     color: #000000;
+
     .main-table__checked {
       width: 65px;
+
       .checkbox {
         position: relative;
         width: 15px;
         height: 15px;
         margin-left: 30px;
         margin-right: 20px;
+
         .checkbox-input {
           appearance: none;
           position: absolute;
@@ -30,6 +39,7 @@
             opacity: 1;
           }
         }
+
         .checkbox-label::before {
           content: "";
           display: block;
@@ -43,6 +53,7 @@
           z-index: 1;
           transition: background 0.1s linear;
         }
+
         .checkbox-label::after {
           content: "";
           display: block;
@@ -60,6 +71,7 @@
         }
       }
     }
+
     .main-table__max-name {
       width: 489px;
       padding-right: 120px;
@@ -68,7 +80,18 @@
       line-height: 15px;
       letter-spacing: 0.04em;
       text-align: left;
+
+      @media only screen and (max-width: 1760px) {
+        width: 419px;
+        padding-right: 50px;
+      }
+
+      @media only screen and (max-width: 1280px) {
+        width: 303px;
+        padding-right: 50px;
+      }
     }
+
     .main-table__min-name {
       width: 367px;
       font-size: 12px;
@@ -76,7 +99,20 @@
       line-height: 15px;
       letter-spacing: 0.04em;
       text-align: left;
+
+      @media only screen and (max-width: 1760px) {
+        width: 348px;
+      }
+
+      @media only screen and (max-width: 1280px) {
+        width: 207px;
+
+        p {
+          width: 125px;
+        }
+      }
     }
+
     .main-table__inn {
       width: 207px;
       font-size: 12px;
@@ -84,7 +120,16 @@
       line-height: 15px;
       letter-spacing: 0.04em;
       text-align: left;
+
+      @media only screen and (max-width: 1760px) {
+        width: 167px;
+      }
+
+      @media only screen and (max-width: 1280px) {
+        width: 117px;
+      }
     }
+
     .main-table__address {
       width: 352px;
       font-size: 12px;
@@ -92,13 +137,23 @@
       line-height: 15px;
       letter-spacing: 0.04em;
       text-align: left;
+
+      @media only screen and (max-width: 1760px) {
+        width: 292px;
+      }
+
+      @media only screen and (max-width: 1280px) {
+        width: 258px;
+      }
     }
   }
+
   .main-table__header {
     height: 59px;
     background: #b8d7eb;
     border-radius: 10px 10px 0 0;
     color: #333333;
+
     .main-table__checked {
       .checkbox {
         .checkbox-label::before {
@@ -107,63 +162,88 @@
         }
       }
     }
+
     .main-table__max-name {
       font-size: 16px;
       font-weight: 600;
       line-height: 19px;
     }
+
     .main-table__min-name {
       font-size: 16px;
       font-weight: 600;
       line-height: 19px;
     }
+
     .main-table__inn {
       font-size: 16px;
       font-weight: 600;
       line-height: 19px;
     }
+
     .main-table__address {
       font-size: 16px;
       font-weight: 600;
       line-height: 19px;
     }
-    .sort-up::after,
-    .sort-down::after {
-      position: absolute;
-      top: calc(50% - 7.5px);
-      z-index: 3;
-      width: 15px;
-      height: 15px;
-      content: '';
-      margin: auto auto auto 5px;
-      transition-property: rotate, background;
-      transition-duration: 0.3s;
-      background-repeat: no-repeat;
-      background-size: cover;
+
+    .header-item {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      .th-sort-icon {
+        width: 15px;
+        height: 15px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-left: 7px;
+      }
     }
-    .sort-up::after {
-      transform: rotate(-180deg);
-    }
-    .sort-down::after {
-      transform: rotate(0deg);
-    }
-    th{
+
+    // .sort-up::after,
+    // .sort-down::after {
+    //   position: absolute;
+    //   top: calc(50% - 7.5px);
+    //   z-index: 3;
+    //   width: 15px;
+    //   height: 15px;
+    //   content: "";
+    //   margin: auto auto auto 5px;
+    //   transition-property: rotate, background;
+    //   transition-duration: 0.3s;
+    //   background-repeat: no-repeat;
+    //   background-size: cover;
+    // }
+
+    // .sort-up::after {
+    //   transform: rotate(-180deg);
+    // }
+
+    // .sort-down::after {
+    //   transform: rotate(0deg);
+    // }
+
+    th {
       position: relative;
     }
   }
+
   .main-table__items {
     margin-top: 40px;
+
     .main-table__item {
       height: 95px;
 
-      &.hidden__item{
+      &.hidden__item {
         display: none;
       }
-      
-      .item__edit{
+
+      .item__edit {
         width: 0;
         position: relative;
-        .item__edit-block{
+
+        .item__edit-block {
           width: 30px;
           height: 80px;
           padding: 5px 0;
@@ -172,7 +252,7 @@
           align-items: center;
           justify-content: space-between;
 
-          background: #FFFFFF;
+          background: #ffffff;
           box-shadow: 0 15px 15px rgba(0, 0, 0, 0.15);
           border-radius: 10px;
 
@@ -184,30 +264,29 @@
           opacity: 0;
           transform: scale(0.25);
           transition: all 0.5s;
-          &.edit-block-hidden{
+          &.edit-block-hidden {
             visibility: visible;
             opacity: 1;
             transform: scale(1);
           }
 
-          .edit-block__btn{
+          .edit-block__btn {
             width: 15px;
             height: 15px;
             background-repeat: no-repeat;
             background-size: cover;
-            &.btn-item-hidden{
+            &.btn-item-hidden {
               background-image: url(../icons/eye_1.png);
             }
-            &.btn-item-edit{
+            &.btn-item-edit {
               background-image: url(../icons/pencil_1.png);
             }
-            &.btn-item-remove{
+            &.btn-item-remove {
               background-image: url(../icons/cancel_2.png);
             }
           }
         }
       }
-
 
       td {
         height: inherit;
@@ -215,14 +294,27 @@
       }
     }
   }
+
   .main-table__items-container {
     width: 100%;
     max-height: 498px;
     overflow-y: scroll;
     background: rgba(255, 255, 255, 0.4);
     border-radius: 0 0 10px 10px;
+
+    @media only screen and (max-width: 360px) {
+      overflow-x: scroll;
+    }
+
     &::-webkit-scrollbar {
       width: 0;
+      height: 5px;
+      background-color: #f2f2f2;
+
+      &-thumb {
+        background: #b8d7eb;
+        border-radius: 10px;
+      }
     }
     -ms-overflow-style: none; /* IE 11 */
     scrollbar-width: none; /* Firefox 64 */
@@ -244,35 +336,51 @@
           }
         }
       }
-      .sort-up::after,
-      .sort-down::after {
-        background-image: url(../icons/Arrow_Up_Dark.png);
+
+      th .th-sort-icon {
+        margin-top: 2px;
+        width: 15px;
+        background-image: url("../icons/Arrow_Up_Dark.png");
       }
+
+      // .sort-up::after,
+      // .sort-down::after {
+      //   background-image: url(../icons/Arrow_Up_Dark.png);
+      // }
     }
+
     .main-table__items-container {
       background: rgba(255, 255, 255, 0.4);
     }
   }
 }
+
 .dark-theme {
   #main-table-container {
     .main-table {
-      color: #F2F2F2;
+      color: #f2f2f2;
     }
     .main-table__header {
-      background: #312F2D;
-      color: #BDBDBD;
+      background: #312f2d;
+      color: #bdbdbd;
       .main-table__checked {
         .checkbox {
           .checkbox-label::before {
-            border: 1px solid #BDBDBD;
+            border: 1px solid #bdbdbd;
           }
         }
       }
-      .sort-up::after,
-      .sort-down::after {
-        background-image: url(../icons/Arrow_Up_Light.png);
+
+      th .th-sort-icon {
+        margin-top: 2px;
+        width: 15px;
+        background-image: url("../icons/Arrow_Up_Light.png");
       }
+
+      // .sort-up::after,
+      // .sort-down::after {
+      //   background-image: url(../icons/Arrow_Up_Light.png);
+      // }
     }
     .main-table__items-container {
       background: rgba(45, 44, 43, 0.6);
