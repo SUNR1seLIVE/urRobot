@@ -5,12 +5,26 @@
   margin-top: 20px;
 
   @media only screen and (max-width: 360px) {
-    max-height: 340px;
+    height: 340px;
     width: 100vw;
+    border-radius: 10px;
   }
 
-  .main-table {
-    width: 100%;
+  .table{
+    width: max-content;
+    height: 557px;
+    //!Поменять на "overflow-x: auto;"
+    overflow-x: auto;
+
+    @media only screen and (max-width: 360px) {
+      width: 100vw;
+      max-height: 306px;
+    }
+
+    
+  .main-table,
+  .main-table__items-container .main-table{
+    width: max-content;
     border-collapse: collapse;
     border-spacing: 0;
     color: #000000;
@@ -149,6 +163,7 @@
   }
 
   .main-table__header {
+    width: max-content;
     height: 59px;
     background: #b8d7eb;
     border-radius: 10px 10px 0 0;
@@ -296,18 +311,22 @@
   }
 
   .main-table__items-container {
-    width: 100%;
+    width: max-content;
     max-height: 498px;
     overflow-y: scroll;
-    background: rgba(255, 255, 255, 0.4);
-    border-radius: 0 0 10px 10px;
 
     @media only screen and (max-width: 360px) {
-      overflow-x: scroll;
+    max-height: 242px;
     }
 
     &::-webkit-scrollbar {
       width: 0;
+    }
+    -ms-overflow-style: none; /* IE 11 */
+    scrollbar-width: none; /* Firefox 64 */
+  }
+
+    &::-webkit-scrollbar {
       height: 5px;
       background-color: #f2f2f2;
 
@@ -323,67 +342,71 @@
 
 .light-theme {
   #main-table-container {
-    .main-table {
-      color: #000000;
-    }
-    .main-table__header {
-      background: #b8d7eb;
-      color: #333333;
-      .main-table__checked {
-        .checkbox {
-          .checkbox-label::before {
-            border: 1px solid #333333;
+        background: rgba(255, 255, 255, 0.4);
+    .table{
+      .main-table {
+        color: #000000;
+      }
+      .main-table__header {
+        background: #b8d7eb;
+        color: #333333;
+        .main-table__checked {
+          .checkbox {
+            .checkbox-label::before {
+              border: 1px solid #333333;
+            }
           }
         }
+  
+        th .th-sort-icon {
+          margin-top: 2px;
+          width: 15px;
+          background-image: url("../icons/Arrow_Up_Dark.png");
+        }
+  
+        // .sort-up::after,
+        // .sort-down::after {
+        //   background-image: url(../icons/Arrow_Up_Dark.png);
+        // }
       }
-
-      th .th-sort-icon {
-        margin-top: 2px;
-        width: 15px;
-        background-image: url("../icons/Arrow_Up_Dark.png");
+  
+      .main-table__items-container {
       }
-
-      // .sort-up::after,
-      // .sort-down::after {
-      //   background-image: url(../icons/Arrow_Up_Dark.png);
-      // }
-    }
-
-    .main-table__items-container {
-      background: rgba(255, 255, 255, 0.4);
     }
   }
 }
 
 .dark-theme {
   #main-table-container {
-    .main-table {
-      color: #f2f2f2;
-    }
-    .main-table__header {
-      background: #312f2d;
-      color: #bdbdbd;
-      .main-table__checked {
-        .checkbox {
-          .checkbox-label::before {
-            border: 1px solid #bdbdbd;
+    background: rgba(45, 44, 43, 0.6);
+    .table{
+      .main-table {
+        color: #f2f2f2;
+      }
+      .main-table__header {
+        background: #312f2d;
+        color: #bdbdbd;
+        .main-table__checked {
+          .checkbox {
+            .checkbox-label::before {
+              border: 1px solid #bdbdbd;
+            }
           }
         }
+  
+        th .th-sort-icon {
+          margin-top: 2px;
+          width: 15px;
+          background-image: url("../icons/Arrow_Up_Light.png");
+        }
+  
+        // .sort-up::after,
+        // .sort-down::after {
+        //   background-image: url(../icons/Arrow_Up_Light.png);
+        // }
       }
-
-      th .th-sort-icon {
-        margin-top: 2px;
-        width: 15px;
-        background-image: url("../icons/Arrow_Up_Light.png");
+      .main-table__items-container {
       }
-
-      // .sort-up::after,
-      // .sort-down::after {
-      //   background-image: url(../icons/Arrow_Up_Light.png);
-      // }
-    }
-    .main-table__items-container {
-      background: rgba(45, 44, 43, 0.6);
     }
   }
 }
