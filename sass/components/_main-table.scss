@@ -29,6 +29,7 @@
       align-items: center;
       justify-content: flex-start;
       opacity: 0;
+      visibility: hidden;
       transform: scaleY(0);
       transition: all 0.3s linear;
 
@@ -114,6 +115,7 @@
 
       &.active-search-box {
         opacity: 1;
+        visibility: visible;
         transform: scaleY(1);
         height: 45px;
         margin-top: 30px;
@@ -451,7 +453,7 @@
     background: rgba(255, 255, 255, 0.4);
     .table {
       .search-box {
-        .search-box__inpet {
+        .search-box__input {
           background: #e0e0e0;
           color: #4f4f4f;
         }
@@ -481,9 +483,6 @@
         //   background-image: url(../icons/Arrow_Up_Dark.png);
         // }
       }
-
-      .main-table__items-container {
-      }
     }
   }
 }
@@ -493,7 +492,7 @@
     background: rgba(45, 44, 43, 0.6);
     .table {
       .search-box {
-        .search-box__inpet {
+        .search-box__input {
           background: #4f4f4f;
           color: #bdbdbd;
         }
@@ -522,8 +521,6 @@
         // .sort-down::after {
         //   background-image: url(../icons/Arrow_Up_Light.png);
         // }
-      }
-      .main-table__items-container {
       }
     }
   }

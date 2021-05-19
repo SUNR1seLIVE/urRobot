@@ -72,6 +72,8 @@ const inputs = document
   .getElementsByClassName("checkbox-input");
 const check_all_rows = document.getElementById("main-table-select-all");
 
+const rows = document.getElementById("main-table__items").getElementsByTagName('tr');
+
 let all_selected = false;
 
 check_all_rows.addEventListener("change", () => {
@@ -120,7 +122,15 @@ for (let input of inputs) {
       }
     }
   });
-}
+};
+
+for (let row of rows) {
+  row.addEventListener('click', () => {
+    row.children[0].children[0].children[0].checked = !row.children[0].children[0].children[0].checked;
+    row.children[5].children[0].classList.toggle('edit-block-hidden')
+  });
+};
+
 //#endregion
 
 //#region // ! Сортировка в главной таблици
@@ -198,14 +208,38 @@ function removeRowTable(btn) {
 //#endregion
 
 
-(function () {
-  const search = document.getElementsByClassName('search')[0];
-  const searchBox = document.getElementsByClassName('search-box')[0];
+const search = document.getElementsByClassName('search')[0];
+const searchBox = document.getElementsByClassName('search-box')[0];
 
-  //#region // ! Включение/выключение строки поиска в таблице
-  search.addEventListener('click', () => {
-    searchBox.classList.toggle('active-search-box');
+//#region // ! Включение/выключение строки поиска в таблице
+search.addEventListener('click', () => {
+  searchBox.classList.toggle('active-search-box');
+});
+//#endregion
+
+
+//#region // ! Активация кнопок popup6
+const tabsBtns = document.getElementsByClassName('popup-edit__btn');
+for (let btn of tabsBtns) {
+  btn.addEventListener('click', () => {
+    const btnIndex = Array.prototype.indexOf.call(
+      btn.parentElement.children,
+      btn
+    );
+
+    for (let b of tabsBtns) {
+      b.classList.remove('popup-edit__btn-active');
+    }
+
+    for(let i of btn.parentElement.parentElement.children){
+      if(i.classList.contains('tab')){
+        i.classList.remove('tab-active')
+      }
+    }
+
+    btn.parentElement.parentElement.children[1 + btnIndex].classList.toggle('tab-active');
+
+    btn.classList.toggle('popup-edit__btn-active');
   });
+}
   //#endregion
-  
-})();
