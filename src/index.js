@@ -288,7 +288,6 @@ for (let btn of tabsBtns) {
         i.classList.remove("tab-active");
       }
     }
-
     btn.parentElement.parentElement.children[1 + btnIndex].classList.toggle(
       "tab-active"
     );
