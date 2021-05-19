@@ -3,14 +3,13 @@
   height: 100%;
   box-shadow: 0 9px 18px rgba(0, 0, 0, 0.18),
     0 5.5px 5px rgba(0, 0, 0, 0.237602);
-  padding: 10px 0 40px 30px;
+  padding: 10px 0 40px 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
-  @media only screen and (max-width: 1100px) {
+  @media only screen and (max-width: 1024px) {
     width: 58px;
-    padding-left: 17px;
   }
 
   @media only screen and (max-width: 360px) {
@@ -19,78 +18,158 @@
 
   &.minSidebar {
     width: 70px;
-    padding-left: 20px;
 
-    .sidebar__footer {
+    & .sidebar__footer {
       display: none;
     }
   }
 
-  .sidebar__item {
-    width: 100%;
-    height: 70px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-
-    .sidebar__item-img {
-      margin-right: 20px;
-      // display: flex;
-      // justify-content: center;
-      // align-items: center;
-      width: 25px;
-      height: 25px;
-      background-repeat: no-repeat;
-      background-size: contain;
-
-      // &.activeSidebar {
-      //   font-weight: 600;
-      // }
-
-      @media only screen and (max-width: 1100px) {
-        margin-right: 0;
-      }
-    }
-
-    .img1 {
-      background-image: url("../icons/Category.png");
-    }
-
-    .img2 {
-      background-image: url("../icons/3_User.png");
-    }
-
-    .img3 {
-      background-image: url("../icons/Category.png");
-    }
-
-    .img4 {
-      background-image: url("../icons/Category.png");
-    }
-
-    .img5 {
-      background-image: url("../icons/Category.png");
-    }
-
-    .sidebar__item-btn {
+  .sidebar-items {
+    .sidebar__item {
+      width: 100%;
+      height: 70px;
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 17px;
-      letter-spacing: 0.04em;
+      margin-left: 30px;
 
-      @media only screen and (max-width: 1100px) {
-        display: none;
+      @media only screen and (max-width: 1024px) {
+        margin-left: 17px;
+      }
+
+      &.changeItemSidebar {
+        margin-left: 20px;
       }
 
       &.activeSidebar {
-        font-weight: 600;
+        margin-left: 25px;
+
+        @media only screen and (max-width: 1024px) {
+          margin-left: 12px;
+        }
+
+        .sidebar__item-label {
+          font-weight: 600;
+        }
+
+        .sidebar__item-img {
+          width: 35px;
+          height: 35px;
+          margin-right: 15px;
+        }
+
+        .img1 {
+          background-image: url("../icons/Category_sh.png");
+        }
+
+        .img2 {
+          background-image: url("../icons/3_User_sh.png");
+        }
+
+        .img3 {
+          background-image: url("../icons/Work_sh.png");
+        }
+
+        .img4 {
+          background-image: url("../icons/change_sh.png");
+        }
+
+        .img5 {
+          background-image: url("../icons/levels_sh.png");
+        }
       }
 
-      &.changeBtnSidebar {
-        display: none;
+      &.activeMinSidebar {
+        margin-left: 15px;
+
+        @media only screen and (max-width: 1024px) {
+          margin-left: 12px;
+        }
+
+        .sidebar__item-label {
+          font-weight: 600;
+        }
+
+        .sidebar__item-img {
+          width: 35px;
+          height: 35px;
+          margin-right: 15px;
+        }
+
+        .img1 {
+          background-image: url("../icons/Category_sh.png");
+        }
+
+        .img2 {
+          background-image: url("../icons/3_User_sh.png");
+        }
+
+        .img3 {
+          background-image: url("../icons/Work_sh.png");
+        }
+
+        .img4 {
+          background-image: url("../icons/change_sh.png");
+        }
+
+        .img5 {
+          background-image: url("../icons/levels_sh.png");
+        }
+      }
+
+      .sidebar__item-img {
+        margin-right: 20px;
+        width: 25px;
+        height: 25px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+
+        @media only screen and (max-width: 1024px) {
+          margin-right: 0;
+        }
+      }
+
+      .img1 {
+        background-image: url("../icons/Category.png");
+      }
+
+      .img2 {
+        background-image: url("../icons/3_User.png");
+      }
+
+      .img3 {
+        background-image: url("../icons/Work.png");
+      }
+
+      .img4 {
+        background-image: url("../icons/change_1.png");
+      }
+
+      .img5 {
+        background-image: url("../icons/levels_1.png");
+      }
+
+      .sidebar__item-label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+        letter-spacing: 0.04em;
+
+        @media only screen and (max-width: 1024px) {
+          display: none;
+        }
+
+        &.activeSidebar {
+          font-weight: 600;
+        }
+
+        &.changeBtnSidebar {
+          display: none;
+        }
       }
     }
   }
@@ -102,8 +181,9 @@
     letter-spacing: 0.04em;
     text-align: left;
     color: #828282;
+    margin-left: 30px;
 
-    @media only screen and (max-width: 1100px) {
+    @media only screen and (max-width: 1024px) {
       display: none;
     }
   }
@@ -114,12 +194,14 @@
     background-color: #fafafa;
 
     .sidebar__item {
-      .sidebar__item-btn {
-        color: #4f4f4f;
-
-        &.activeSidebar {
+      &.activeSidebar {
+        p {
           color: #21317a;
         }
+      }
+
+      .sidebar__item-label {
+        color: #4f4f4f;
       }
     }
   }
@@ -130,12 +212,14 @@
     background-color: #00082f;
 
     .sidebar__item {
-      .sidebar__item-btn {
-        color: #bdbdbd;
-
-        &.activeSidebar {
+      &.activeSidebar {
+        p {
           color: #ffffff;
         }
+      }
+
+      .sidebar__item-label {
+        color: #bdbdbd;
       }
     }
   }

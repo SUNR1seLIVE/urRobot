@@ -45,23 +45,76 @@ theme_btn.addEventListener("click", () => {
 
 //#region // ! Выделение строки в sidebar
 function sidebarBtn(btn) {
-  const btns = document.getElementsByClassName("sidebar__item-btn");
-  for (let i of btns) {
-    i.classList.remove("activeSidebar");
+  const btns = document.getElementsByClassName("sidebar__item");
+  const sideBar = document.getElementById("sidebar");
+  if (!sideBar.classList.contains("minSidebar")) {
+    for (let i of btns) {
+      i.classList.remove("activeSidebar");
+      i.classList.remove("activeMinSidebar");
+    }
+    btn.classList.toggle("activeSidebar");
+  } else {
+    for (let i of btns) {
+      i.classList.remove("activeMinSidebar");
+      i.classList.remove("activeSidebar");
+    }
+    btn.classList.toggle("activeMinSidebar");
   }
-  btn.classList.toggle("activeSidebar");
+}
+//#endregion
+
+//#region // ! Выделение иконки в sidebar 360
+function sidebarBtn360(btn) {
+  const btns360 = document.getElementsByClassName("sidebar__item-360");
+  const sideBar360 = document.getElementById("sidebar-360");
+  if (sideBar360.classList.contains("activeSidebar")) {
+    for (let i of btns360) {
+      i.classList.remove("activeSidebar");
+    }
+    btn.classList.toggle("activeSidebar");
+  } else {
+    for (let i of btns360) {
+      i.classList.remove("activeSidebar");
+    }
+    btn.classList.toggle("activeSidebar");
+  }
 }
 //#endregion
 
 //#region // !  Изменение размера sidebar
 function changeSidebar(btn) {
   document.getElementById("sidebar").classList.toggle("minSidebar");
+
+  const sidebarItems = document.getElementById("sidebar");
+  const btns2 = document.getElementsByClassName("sidebar__item");
+
+  if (sidebarItems.classList.contains("minSidebar")) {
+    for (let i of btns2) {
+      if (i.classList.contains("activeSidebar")) {
+        i.classList.remove("activeSidebar");
+        i.classList.remove("activeMinSidebar");
+      }
+    }
+  } else {
+    for (let i of btns2) {
+      if (i.classList.contains("activeMinSidebar")) {
+        i.classList.remove("activeMinSidebar");
+        i.classList.remove("activeSidebar");
+      }
+    }
+  }
+
   document.getElementById("content-sidebar").classList.toggle("changeSidebar");
   document.getElementById("content").classList.toggle("content-max");
 
-  const btns = document.getElementsByClassName("sidebar__item-btn");
+  const btns = document.getElementsByClassName("sidebar__item-label");
   for (let i of btns) {
     i.classList.toggle("changeBtnSidebar");
+  }
+
+  const items = document.getElementsByClassName("sidebar__item");
+  for (let i of items) {
+    i.classList.toggle("changeItemSidebar");
   }
 }
 //#endregion
@@ -72,9 +125,18 @@ const inputs = document
   .getElementsByClassName("checkbox-input");
 const check_all_rows = document.getElementById("main-table-select-all");
 
-const rows = document.getElementById("main-table__items").getElementsByTagName('tr');
-
 let all_selected = false;
+
+const rows = document
+  .getElementById("main-table__items")
+  .getElementsByTagName("tr");
+for (let row of rows) {
+  row.addEventListener("click", () => {
+    row.children[0].children[0].children[0].checked =
+      !row.children[0].children[0].children[0].checked;
+    row.children[5].children[0].classList.toggle("edit-block-hidden");
+  });
+}
 
 check_all_rows.addEventListener("change", () => {
   if (check_all_rows.checked) {
@@ -122,15 +184,7 @@ for (let input of inputs) {
       }
     }
   });
-};
-
-for (let row of rows) {
-  row.addEventListener('click', () => {
-    row.children[0].children[0].children[0].checked = !row.children[0].children[0].children[0].checked;
-    row.children[5].children[0].classList.toggle('edit-block-hidden')
-  });
-};
-
+}
 //#endregion
 
 //#region // ! Сортировка в главной таблици
@@ -207,39 +261,39 @@ function removeRowTable(btn) {
 }
 //#endregion
 
-
-const search = document.getElementsByClassName('search')[0];
-const searchBox = document.getElementsByClassName('search-box')[0];
-
 //#region // ! Включение/выключение строки поиска в таблице
-search.addEventListener('click', () => {
-  searchBox.classList.toggle('active-search-box');
+const search = document.getElementsByClassName("search")[0];
+const searchBox = document.getElementsByClassName("search-box")[0];
+search.addEventListener("click", () => {
+  searchBox.classList.toggle("active-search-box");
+  search.classList.toggle("search-cancel");
 });
 //#endregion
 
-
 //#region // ! Активация кнопок popup6
-const tabsBtns = document.getElementsByClassName('popup-edit__btn');
+const tabsBtns = document.getElementsByClassName("popup-edit__btn");
 for (let btn of tabsBtns) {
-  btn.addEventListener('click', () => {
+  btn.addEventListener("click", () => {
     const btnIndex = Array.prototype.indexOf.call(
       btn.parentElement.children,
       btn
     );
 
     for (let b of tabsBtns) {
-      b.classList.remove('popup-edit__btn-active');
+      b.classList.remove("popup-edit__btn-active");
     }
 
-    for(let i of btn.parentElement.parentElement.children){
-      if(i.classList.contains('tab')){
-        i.classList.remove('tab-active')
+    for (let i of btn.parentElement.parentElement.children) {
+      if (i.classList.contains("tab")) {
+        i.classList.remove("tab-active");
       }
     }
 
-    btn.parentElement.parentElement.children[1 + btnIndex].classList.toggle('tab-active');
+    btn.parentElement.parentElement.children[1 + btnIndex].classList.toggle(
+      "tab-active"
+    );
 
-    btn.classList.toggle('popup-edit__btn-active');
+    btn.classList.toggle("popup-edit__btn-active");
   });
 }
-  //#endregion
+//#endregion
