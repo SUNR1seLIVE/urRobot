@@ -1,7 +1,6 @@
 .btn {
   width: 160px;
   height: 60px;
-  // margin-top: 15px;
   box-sizing: border-box;
   border-radius: 10px;
   font-weight: 500;
@@ -103,5 +102,28 @@
 
   &:active {
     background-color: #00082f;
+  }
+}
+
+.btn-tab-bridht {
+  width: 221px;
+  border: 1px solid #21317a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    p {
+      color: #ffffff;
+    }
+
+    div {
+      display: none;
+    }
+  }
+
+  p {
+    margin-right: 10px;
+    // color: #000000;
   }
 }

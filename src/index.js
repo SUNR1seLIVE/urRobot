@@ -288,6 +288,7 @@ for (let btn of tabsBtns) {
         i.classList.remove("tab-active");
       }
     }
+
     btn.parentElement.parentElement.children[1 + btnIndex].classList.toggle(
       "tab-active"
     );
@@ -295,4 +296,45 @@ for (let btn of tabsBtns) {
     btn.classList.toggle("popup-edit__btn-active");
   });
 }
+//#endregion
+
+//#region //! Включение режима редактирования
+const checkEdit = document.getElementById('eс__isactive-edit-btn');console.log(checkEdit);
+
+const tabs_view = [
+  document.getElementById('tab-all-info__view'),
+  document.getElementById('tab-staff__view'),
+  document.getElementById('tab-docs__view')
+];
+const tabs_edit = [
+  document.getElementById('tab-all-info__edit'),
+  document.getElementById('tab-staff__edit'),
+  document.getElementById('tab-docs__edit')
+];
+
+checkEdit.addEventListener('change', ()=>{
+  if(checkEdit.checked){
+    for(let tab of tabs_edit){
+      if(!tab.classList.contains('tab-isactive')){
+        tab.classList.add('tab-isactive');
+      }
+    }
+    for(let tab of tabs_view){
+      if(tab.classList.contains('tab-isactive')){
+        tab.classList.remove('tab-isactive');
+      }
+    }
+  }else{
+    for(let tab of tabs_view){
+      if(!tab.classList.contains('tab-isactive')){
+        tab.classList.add('tab-isactive');
+      }
+    }
+    for(let tab of tabs_edit){
+      if(tab.classList.contains('tab-isactive')){
+        tab.classList.remove('tab-isactive');
+      }
+    }
+  }
+})
 //#endregion

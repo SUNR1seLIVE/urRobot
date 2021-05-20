@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
-  <body class="light-theme">
+  <body class="body light-theme">
     <header id="header" class="header">
       <div class="header-left">
         <a href="#">
@@ -726,47 +726,6 @@
       </section>
       <!-- /.content -->
 
-      <section id="sidebar-360" class="sidebar-360">
-        <button
-          class="sidebar__item-360"
-          onclick="sidebarBtn360(this)"
-          type="button"
-        >
-          <div class="sidebar__item-img img1"></div>
-        </button>
-
-        <button
-          class="sidebar__item-360"
-          onclick="sidebarBtn360(this)"
-          type="button"
-        >
-          <div class="sidebar__item-img img2"></div>
-        </button>
-
-        <button
-          class="sidebar__item-360"
-          onclick="sidebarBtn360(this)"
-          type="button"
-        >
-          <div class="sidebar__item-img img3"></div>
-        </button>
-
-        <button
-          class="sidebar__item-360"
-          onclick="sidebarBtn360(this)"
-          type="button"
-        >
-          <div class="sidebar__item-img img4"></div>
-        </button>
-
-        <button
-          class="sidebar__item-360"
-          onclick="sidebarBtn360(this)"
-          type="button"
-        >
-          <div class="sidebar__item-img img5"></div>
-        </button>
-      </section>
       <!-- /.sidebar-360 -->
 
       <!-- popup 1 -->
@@ -966,7 +925,6 @@
           </div>
         </div>
       </div>
-
       <!-- popup 2 -->
       <div id="popup2" class="popup">
         <a href="#section" class="popup__area"></a>
@@ -1117,7 +1075,6 @@
           </div>
         </div>
       </div>
-
       <!-- popup 3 -->
       <div id="popup3" class="popup">
         <a href="#section" class="popup__area"></a>
@@ -1151,7 +1108,6 @@
           </div>
         </div>
       </div>
-
       <!-- popup 4 -->
       <div id="popup4" class="popup">
         <a href="#section" class="popup__area"></a>
@@ -1172,7 +1128,6 @@
           </div>
         </div>
       </div>
-
       <!-- popup 5 -->
       <div id="popup5" class="popup">
         <a href="#section" class="popup__area"></a>
@@ -1202,9 +1157,23 @@
           <div class="popup__content-header">
             <p class="content__header-title">МП ГПЩ "ДЕЗ ЖКХ"</p>
 
-            <a href="#section" class="popup__close">
-              <img src="icons/close-icon.png" alt="close-icon" />
-            </a>
+            <div class="content__header-btns">
+              <input
+                id="eс__isactive-edit-btn"
+                class="isactive-edit-btn__input"
+                type="checkbox"
+              />
+              <label
+                for="eс__isactive-edit-btn"
+                class="isactive-edit-btn__label"
+              >
+                <p>Режим редактирования</p>
+              </label>
+
+              <a href="#section" class="popup__close">
+                <img src="icons/close-icon.png" alt="close-icon" />
+              </a>
+            </div>
           </div>
 
           <div class="popup__content-items">
@@ -1241,7 +1210,8 @@
             <!-- Контейнер для вкладки "Общая информация" -->
             <div class="tab tab-all-info tab-active">
               <!-- Контейнер для вкладки "Общая информация (просмотр)" -->
-              <div class="tab-all-info__view">
+              <div id="tab-all-info__view" class="tab-all-info__view tab-isactive">
+                <!-- Шапка -->
                 <div class="tab-all-info__header">
                   <p>Общие данные организации</p>
                 </div>
@@ -1460,22 +1430,152 @@
                     </p>
                   </div>
                 </div>
-              </div>
 
+              </div>
               <!-- Контейнер для вкладки "Общая информация (редактирование)" -->
-              <div class="tab-all-info__edit"></div>
+              <div id="tab-all-info__edit" class="tab-all-info__edit"></div>
             </div>
 
             <!-- Контейнер для вкладки "Сотрудники" -->
-            <div class="tab tab-staff"></div>
+            <div class="tab tab-staff">
+              <!-- Контейнер для вкладки "Сотрудники (просмотр)" -->
+              <div id="tab-staff__view" class="tab-staff__view tab-isactive">
+                <div class="tab__heading">
+                  <h2>Сотрудники</h2>
+                  <button class="btn btn-tab-bridht">
+                    <p>Добавить сотрудника</p>
+                    <!-- <img src="icons/add.png" alt="add" /> -->
+                    <div></div>
+                  </button>
+                </div>
+
+                <div class="tab__content">
+                  <table>
+                    <tr>
+                      <th class="tab-name">ФИО</th>
+                      <th class="tab-pos">Должность</th>
+                      <th class="tab-tel">Моб. телефон</th>
+                      <th class="tab-email">Email</th>
+                    </tr>
+                    <tr>
+                      <td class="tab-name">Иванов Иван Иванович</td>
+                      <td class="tab-pos">Заместитель директора</td>
+                      <td class="tab-tel">8(496)5669956</td>
+                      <td class="tab-email">info@urrobot.net</td>
+                    </tr>
+                    <tr>
+                      <td class="tab-name">Иванов Иван Иванович</td>
+                      <td class="tab-pos">Заместитель директора</td>
+                      <td class="tab-tel">8(496)5669956</td>
+                      <td class="tab-email">info@urrobot.net</td>
+                    </tr>
+                    <tr>
+                      <td class="tab-name">Иванов Иван Иванович</td>
+                      <td class="tab-pos">Заместитель директора</td>
+                      <td class="tab-tel">8(496)5669956</td>
+                      <td class="tab-email">info@urrobot.net</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+
+              <!-- Контейнер для вкладки "Сотрудники (редактирование)" -->
+              <div id="tab-staff__edit" class="tab-staff__edit">
+                <div class="tab__heading">
+                  <h2>Сотрудники</h2>
+                  <button class="btn btn-tab-bridht">
+                    <p>Добавить сотрудника</p>
+                    <img src="icons/add.png" alt="add" />
+                  </button>
+                </div>
+  
+                <div class="tab__content">
+                  <table>
+                    <tr>
+                      <th class="tab-name">ФИО</th>
+                      <th class="tab-pos">Должность</th>
+                      <th class="tab-tel">Моб. телефон</th>
+                      <th class="tab-email">Email</th>
+                    </tr>
+                    <tr>
+                      <td class="tab-name">Иванов Иван Иванович</td>
+                      <td class="tab-pos">Заместитель директора</td>
+                      <td class="tab-tel">8(496)5669956</td>
+                      <td class="tab-email">info@urrobot.net</td>
+                    </tr>
+                    <tr>
+                      <td class="tab-name">Иванов Иван Иванович</td>
+                      <td class="tab-pos">Заместитель директора</td>
+                      <td class="tab-tel">8(496)5669956</td>
+                      <td class="tab-email">info@urrobot.net</td>
+                    </tr>
+                    <tr>
+                      <td class="tab-name">Иванов Иван Иванович</td>
+                      <td class="tab-pos">Заместитель директора</td>
+                      <td class="tab-tel">8(496)5669956</td>
+                      <td class="tab-email">info@urrobot.net</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
 
             <!-- Контейнер для вкладки "Документы" -->
-            <div class="tab tab-docs"></div>
+            <div class="tab tab-docs">
+              <!-- Контейнер для вкладки "Сотрудники (просмотр)" -->
+              <div id="tab-docs__view" class="tab-docs__view tab-isactive"></div>
+
+              <!-- Контейнер для вкладки "Сотрудники (редактирование)" -->
+              <div id="tab-docs__edit" class="tab-docs__edit"></div>
+            </div>
+
           </div>
         </div>
       </div>
     </div>
     <!-- /.container -->
+
+    <section id="sidebar-360" class="sidebar-360">
+      <button
+        class="sidebar__item-360"
+        onclick="sidebarBtn360(this)"
+        type="button"
+      >
+        <div class="sidebar__item-img img1"></div>
+      </button>
+
+      <button
+        class="sidebar__item-360"
+        onclick="sidebarBtn360(this)"
+        type="button"
+      >
+        <div class="sidebar__item-img img2"></div>
+      </button>
+
+      <button
+        class="sidebar__item-360"
+        onclick="sidebarBtn360(this)"
+        type="button"
+      >
+        <div class="sidebar__item-img img3"></div>
+      </button>
+
+      <button
+        class="sidebar__item-360"
+        onclick="sidebarBtn360(this)"
+        type="button"
+      >
+        <div class="sidebar__item-img img4"></div>
+      </button>
+
+      <button
+        class="sidebar__item-360"
+        onclick="sidebarBtn360(this)"
+        type="button"
+      >
+        <div class="sidebar__item-img img5"></div>
+      </button>
+    </section>
 
     <script src="index.js"></script>
   </body>

@@ -1,6 +1,7 @@
 .header {
   max-width: 100%;
   height: 120px;
+  //height: 12.56%;
   background-color: #00082f;
   display: flex;
   justify-content: space-between;
@@ -287,7 +288,7 @@
         .header__user-arrow {
           height: 100%;
           padding: 0 20px 0 24px;
-          background-image: url(../../icons/ArrowUp5.png);
+          background-image: url("../icons/ArrowUp5.png");
           background-repeat: no-repeat;
           background-position: center;
 
@@ -357,7 +358,7 @@
             left: 1px;
             bottom: 1px;
             background-color: white;
-            background-image: url("../../icons/sun1.png");
+            background-image: url("../icons/sun1.png");
             background-repeat: no-repeat;
             background-size: contain;
             background-position: center;
