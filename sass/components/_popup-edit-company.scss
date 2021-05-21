@@ -1,0 +1,433 @@
+.popup .popup__content.edit-company {
+  margin: 100px auto auto;
+  width: 960px;
+  height: 640px;
+  position: relative;
+
+  .popup__content-header {
+    .content__header-btns {
+      width: 240px;
+      height: 15px;
+      margin-right: 30px;
+      margin-top: 30px;
+      display: flex;
+      justify-content: flex-end;
+      position: relative;
+
+      .isactive-edit-btn__input {
+        appearance: none;
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        &:checked + .isactive-edit-btn__label {
+          width: max-content;
+
+          p {
+            opacity: 1;
+            transform: scaleX(1);
+          }
+
+          &::before {
+            opacity: 0;
+          }
+
+          &::after {
+            opacity: 1;
+          }
+        }
+      }
+
+      .isactive-edit-btn__label {
+        margin-right: 65px;
+        width: 0;
+        p {
+          font-size: 12px;
+          font-weight: 500;
+          line-height: 15px;
+          letter-spacing: 0.04em;
+          text-align: left;
+          opacity: 0;
+          transform: scaleX(0);
+          transition: background 0.2s, opacity 0.2s, width 0.2s;
+        }
+      }
+
+      .isactive-edit-btn__label::after,
+      .isactive-edit-btn__label::before {
+        content: "";
+        display: block;
+        opacity: 1;
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        transition: background 0.2s, opacity 0.2s;
+      }
+
+      .isactive-edit-btn__label::before {
+        height: 15px;
+        width: 15px;
+        opacity: 1;
+        left: calc(100% - 70px);
+      }
+
+      .isactive-edit-btn__label::after {
+        height: 25px;
+        width: 25px;
+        opacity: 0;
+        left: calc(100% - 75px);
+      }
+
+      .popup__close {
+        margin: 0;
+      }
+    }
+  }
+
+  .popup__content-items {
+    position: relative;
+    width: 100%;
+    height: calc(100% - 100px);
+    margin-top: 21px;
+
+    .popup-edit__header {
+      width: 900px;
+      height: 38px;
+      margin: 0 auto;
+      border-bottom: 1px solid #cbd0e7;
+
+      display: flex;
+      justify-content: flex-start;
+
+      .popup-edit__btn {
+        position: relative;
+        width: 184px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        .popup-edit__btn-title {
+          width: max-content;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          p {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 17px;
+            letter-spacing: 0.02em;
+            text-align: left;
+            transition: all 0.3s;
+          }
+
+          .popup-edit__btn-title-icon {
+            margin-left: 10px;
+            width: 20px;
+            height: 20px;
+            transition: all 0.3s;
+          }
+        }
+
+        .btn-line {
+          width: 100%;
+          height: 3px;
+          background: #5080cd;
+          border-radius: 3px;
+          position: absolute;
+          left: 0;
+          top: calc(100% - 2px);
+          opacity: 0;
+          transition: opacity 0.3s linear;
+        }
+
+        &.popup-edit__btn-all-info {
+          margin-left: 10px;
+        }
+
+        &.popup-edit__btn-staff {
+          margin-left: 80px;
+        }
+
+        &.popup-edit__btn-docs {
+          margin-left: 55px;
+        }
+
+        &.popup-edit__btn-active {
+          .btn-line {
+            width: 100%;
+            height: 3px;
+            background: #5080cd;
+            border-radius: 3px;
+            position: absolute;
+            left: 0;
+            top: calc(100% - 2px);
+            opacity: 1;
+            transition: opacity 0.3s linear;
+          }
+        }
+      }
+    }
+
+    .tab {
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 38px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s linear;
+      overflow-y: scroll;
+
+      &.tab-all-info.tab-active .tab-all-info__view.tab-isactive,
+      &.tab-staff.tab-active .tab-staff__view.tab-isactive,
+      &.tab-docs.tab-active .tab-docs__view.tab-isactive,
+      &.tab-all-info.tab-active .tab-all-info__edit.tab-isactive,
+      &.tab-staff.tab-active .tab-staff__edit.tab-isactive,
+      &.tab-docs.tab-active .tab-docs__edit.tab-isactive {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      // &.tab-active {
+        // &.tab-all-info {
+          // z-index: 10;
+          // opacity: 1;
+          // visibility: visible;
+        // }
+// 
+        // &.tab-staff {
+          // z-index: 10;
+          // opacity: 1;
+          // visibility: visible;
+        // }
+// 
+        // &.tab-docs {
+          // z-index: 10;
+          // opacity: 1;
+          // visibility: visible;
+        // }
+      // }
+    }
+  }
+}
+
+.light-theme {
+  .popup {
+    .popup__content {
+      &.edit-company {
+        .popup__content-header {
+          .content__header-btns {
+            .isactive-edit-btn__label {
+              p {
+                color: #828282;
+              }
+            }
+
+            .isactive-edit-btn__label::before {
+              background-image: url(../icons/isactive_ebit_btn_light_def.png);
+            }
+
+            .isactive-edit-btn__label::after {
+              background-image: url(../icons/isactive_ebit_btn_light.png);
+            }
+          }
+        }
+
+        .popup__content-items {
+          .popup-edit__header {
+            border-bottom: 1px solid #cbd0e7;
+
+            .popup-edit__btn {
+              .popup-edit__btn-title {
+                p {
+                  color: #828282;
+                }
+              }
+
+              &.popup-edit__btn-all-info {
+                .popup-edit__btn-title {
+                  .popup-edit__btn-title-icon {
+                    background-image: url(../icons/all_info_light_def.png);
+                  }
+                }
+              }
+
+              &.popup-edit__btn-staff {
+                .popup-edit__btn-title {
+                  .popup-edit__btn-title-icon {
+                    background-image: url(../icons/staff_light_def.png);
+                  }
+                }
+              }
+
+              &.popup-edit__btn-docs {
+                .popup-edit__btn-title {
+                  .popup-edit__btn-title-icon {
+                    background-image: url(../icons/docs_light_def.png);
+                  }
+                }
+              }
+
+              &.popup-edit__btn-active {
+                .popup-edit__btn-title {
+                  p {
+                    font-weight: 500;
+                    color: #21317a;
+                  }
+                }
+
+                .btn-line {
+                  background: #5080cd;
+                }
+
+                &.popup-edit__btn-all-info {
+                  .popup-edit__btn-title {
+                    .popup-edit__btn-title-icon {
+                      background-image: url(../icons/all_info_light.png);
+                    }
+                  }
+                }
+
+                &.popup-edit__btn-staff {
+                  .popup-edit__btn-title {
+                    .popup-edit__btn-title-icon {
+                      background-image: url(../icons/staff_light.png);
+                    }
+                  }
+                }
+
+                &.popup-edit__btn-docs {
+                  .popup-edit__btn-title {
+                    .popup-edit__btn-title-icon {
+                      background-image: url(../icons/docs_light.png);
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          .tab {
+            &::-webkit-scrollbar {
+              width: 0;
+            }
+            -ms-overflow-style: none; /* IE 11 */
+            scrollbar-width: none; /* Firefox 64 */
+          }
+        }
+      }
+    }
+  }
+}
+
+.dark-theme {
+  .popup {
+    .popup__content {
+      &.edit-company {
+        .popup__content-header {
+          .content__header-btns {
+            .isactive-edit-btn__label {
+              p {
+                color: #f2f2f2;
+              }
+            }
+
+            .isactive-edit-btn__label::before {
+              background-image: url(../icons/isactive_ebit_btn_dark_def.png);
+            }
+
+            .isactive-edit-btn__label::after {
+              background-image: url(../icons/isactive_ebit_btn_dark.png);
+            }
+          }
+        }
+
+        .popup__content-items {
+          .popup-edit__header {
+            border-bottom: 1px solid #4f4f4f;
+
+            .popup-edit__btn {
+              .popup-edit__btn-title {
+                p {
+                  color: #bdbdbd;
+                }
+              }
+
+              &.popup-edit__btn-all-info {
+                .popup-edit__btn-title {
+                  .popup-edit__btn-title-icon {
+                    background-image: url(../icons/all_info_dark_def.png);
+                  }
+                }
+              }
+
+              &.popup-edit__btn-staff {
+                .popup-edit__btn-title {
+                  .popup-edit__btn-title-icon {
+                    background-image: url(../icons/staff_dark_def.png);
+                  }
+                }
+              }
+
+              &.popup-edit__btn-docs {
+                .popup-edit__btn-title {
+                  .popup-edit__btn-title-icon {
+                    background-image: url(../icons/docs_dark_def.png);
+                  }
+                }
+              }
+
+              &.popup-edit__btn-active {
+                .popup-edit__btn-title {
+                  p {
+                    font-weight: 500;
+                    color: #495cff;
+                  }
+                }
+
+                .btn-line {
+                  background: #5080cd;
+                }
+
+                &.popup-edit__btn-all-info {
+                  .popup-edit__btn-title {
+                    .popup-edit__btn-title-icon {
+                      background-image: url(../icons/all_info_dark.png);
+                    }
+                  }
+                }
+
+                &.popup-edit__btn-staff {
+                  .popup-edit__btn-title {
+                    .popup-edit__btn-title-icon {
+                      background-image: url(../icons/staff_dark.png);
+                    }
+                  }
+                }
+
+                &.popup-edit__btn-docs {
+                  .popup-edit__btn-title {
+                    .popup-edit__btn-title-icon {
+                      background-image: url(../icons/docs_dark.png);
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          .tab {
+            &::-webkit-scrollbar {
+              width: 0;
+            }
+            -ms-overflow-style: none; /* IE 11 */
+            scrollbar-width: none; /* Firefox 64 */
+          }
+        }
+      }
+    }
+  }
+}

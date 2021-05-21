@@ -1,0 +1,294 @@
+// .popup .popup__content.edit-company .popup__content-items .tab
+.tab-staff {
+  width: 100%;
+  height: 499px;
+
+  .tab-staff__heading {
+    height: 120px;
+    padding: 30px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .tab-staff__view {
+    display: none; // TEST!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+
+    .tab__content-default {
+      height: max-content;
+      padding: 10px 50px 30px 50px;
+
+      table {
+        border-collapse: collapse;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 15px;
+        letter-spacing: 0.04em;
+        text-align: left;
+
+        tr {
+          height: 55px;
+
+          .tab-name {
+            width: 277px;
+            padding-right: 56px;
+          }
+
+          .tab-pos {
+            width: 215px;
+            padding-right: 30px;
+          }
+
+          .tab-tel {
+            width: 180px;
+            padding-right: 59px;
+          }
+
+          .tab-email {
+            width: 177px;
+          }
+        }
+      }
+    }
+  }
+
+  .tab-staff__edit {
+    // display: none; //test!!!!!!!!!!!!!!!!!!!!!!!!!!
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+
+    .tab__heading {
+      height: 120px;
+      padding: 30px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      h2 {
+        color: #21317a;
+      }
+
+      .btn-tab-bridht {
+        div {
+          display: block;
+        }
+
+        &:hover {
+          p {
+            color: #ffffff;
+          }
+        }
+      }
+    }
+
+    .tab__content-adding {
+      height: max-content;
+      padding: 10px 50px 30px 50px;
+
+      table {
+        border-collapse: collapse;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 15px;
+        letter-spacing: 0.04em;
+        text-align: left;
+
+        tr {
+          height: 55px;
+
+          .tab-name {
+            width: 277px;
+            padding-right: 56px;
+          }
+
+          .tab-pos {
+            width: 215px;
+            padding-right: 30px;
+          }
+
+          .tab-tel {
+            width: 180px;
+            padding-right: 59px;
+          }
+
+          .tab-email {
+            width: 130px;
+            padding-right: 14px;
+          }
+
+          .tab-pencil {
+            width: 23px;
+            padding-right: 15px;
+            .tab-pencil-img {
+              width: 15px;
+              height: 15px;
+              background-image: url(../icons/pencil_staff.png);
+            }
+          }
+
+          .tab-check {
+            width: 23px;
+
+            .tab-check-img {
+              width: 15px;
+              height: 15px;
+              background-image: url(../icons/cancel_staff.png);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.light-theme {
+  .tab-staff__heading {
+    h2 {
+      color: #21317a;
+    }
+
+    .btn-tab-bridht {
+      &:hover {
+        border: none;
+        box-shadow: 0 15px 15px rgba(0, 0, 0, 0.15);
+        background-color: #21317a;
+
+        div {
+          display: none;
+        }
+        p {
+          margin-right: 0;
+          color: #ffffff;
+        }
+      }
+
+      &:active {
+        border: none;
+        background: #00082f;
+        box-shadow: 0 15px 15px rgba(0, 0, 0, 0.15);
+      }
+
+      border: 1px solid #21317a;
+      p {
+        color: #000000;
+      }
+
+      div {
+        background-image: url("../icons/add.png");
+      }
+    }
+  }
+
+  .tab-staff__view {
+    .tab__content-default {
+      table {
+        tr {
+          border-bottom: 1px solid #e0e0e0;
+
+          th {
+            color: #000000;
+          }
+
+          td {
+            color: #4f4f4f;
+          }
+        }
+      }
+    }
+  }
+
+  .tab-staff__edit {
+    .tab__content-adding {
+      table {
+        tr {
+          border-bottom: 1px solid #e0e0e0;
+
+          th {
+            color: #000000;
+          }
+
+          td {
+            color: #4f4f4f;
+          }
+        }
+      }
+    }
+  }
+}
+
+.dark-theme {
+  .tab-staff__heading {
+    h2 {
+      color: #495cff;
+    }
+    .btn-tab-bridht {
+      &:hover {
+        border: none;
+        box-shadow: 0 15px 15px rgba(0, 0, 0, 0.15);
+        background-color: #495cff;
+
+        div {
+          display: none;
+        }
+        p {
+          margin-right: 0;
+          color: #ffffff;
+        }
+      }
+
+      &:active {
+        border: none;
+        background: #00082f;
+        box-shadow: 0 15px 15px rgba(0, 0, 0, 0.15);
+      }
+
+      border: 1px solid #495cff;
+      p {
+        color: #f2f2f2;
+      }
+
+      div {
+        background-image: url("../icons/add_w.png");
+      }
+    }
+  }
+
+  .tab-staff__view {
+    .tab__content-default {
+      table {
+        tr {
+          border-bottom: 1px solid #333333;
+          th {
+            color: #f2f2f2;
+          }
+
+          td {
+            color: #e0e0e0;
+          }
+        }
+      }
+    }
+  }
+
+  .tab-staff__edit {
+    .tab__content-adding {
+      table {
+        tr {
+          border-bottom: 1px solid #333333;
+          th {
+            color: #f2f2f2;
+          }
+
+          td {
+            color: #f2f2f2;
+          }
+        }
+      }
+    }
+  }
+}

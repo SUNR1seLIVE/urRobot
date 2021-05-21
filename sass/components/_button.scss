@@ -107,23 +107,17 @@
 
 .btn-tab-bridht {
   width: 221px;
-  border: 1px solid #21317a;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: transparent;
 
-  &:hover {
-    p {
-      color: #ffffff;
-    }
-
-    div {
-      display: none;
-    }
+  div {
+    width: 15px;
+    height: 15px;
   }
 
   p {
     margin-right: 10px;
-    // color: #000000;
   }
 }
