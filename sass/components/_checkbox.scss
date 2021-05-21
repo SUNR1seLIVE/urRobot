@@ -1,0 +1,64 @@
+
+      .isactive-edit-btn__input {
+        appearance: none;
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        &:checked + .isactive-edit-btn__label {
+          width: max-content;
+
+          p {
+            opacity: 1;
+            transform: scaleX(1);
+          }
+
+          &::before {
+            opacity: 0;
+          }
+
+          &::after {
+            opacity: 1;
+          }
+        }
+      }
+
+      .isactive-edit-btn__label {
+        margin-right: 65px;
+        width: 0;
+        p {
+          font-size: 12px;
+          font-weight: 500;
+          line-height: 15px;
+          letter-spacing: 0.04em;
+          text-align: left;
+          opacity: 0;
+          transform: scaleX(0);
+          transition: background 0.2s, opacity 0.2s, width 0.2s;
+        }
+      }
+
+      .isactive-edit-btn__label::after,
+      .isactive-edit-btn__label::before {
+        content: "";
+        display: block;
+        opacity: 1;
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        transition: background 0.2s, opacity 0.2s;
+      }
+
+      .isactive-edit-btn__label::before {
+        height: 15px;
+        width: 15px;
+        opacity: 1;
+        left: calc(100% - 70px);
+      }
+
+      .isactive-edit-btn__label::after {
+        height: 25px;
+        width: 25px;
+        opacity: 0;
+        left: calc(100% - 75px);
+      }
