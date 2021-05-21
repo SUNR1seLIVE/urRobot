@@ -12,11 +12,12 @@
   }
 
   .tab-staff__view {
-    display: none; // TEST!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
+    width: 100%;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s, visibility 0.3s;
+    position: absolute;
+    top: 120px;
 
     .tab__content-default {
       height: max-content;
@@ -57,10 +58,12 @@
   }
 
   .tab-staff__edit {
-    // display: none; //test!!!!!!!!!!!!!!!!!!!!!!!!!!
+    width: 100%;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s, visibility 0.3s;
+    position: absolute;
+    top: 120px;
 
     .tab__heading {
       height: 120px;

@@ -4,16 +4,21 @@
 
   .tab-all-info__view,
   .tab-all-info__edit {
+    width: 860px;
     opacity: 0;
     visibility: hidden;
+    position: absolute;
+    top: 0;
   }
 
   &.tab-active {
     .tab-all-info__view {
-      margin-bottom: 50px;
       opacity: 0;
       visibility: hidden;
-      // transition: opacity 0.3s, visibility 0.3s;
+
+      &.tab-isactive {
+        padding-bottom: 50px;
+      }
 
       .tab-all-info__header {
         height: 72px;
@@ -76,6 +81,138 @@
         }
       }
     }
+    .tab-all-info__edit {
+      opacity: 0;
+      visibility: hidden;
+
+      &.tab-isactive {
+        padding-bottom: 50px;
+      }
+
+      .tab-all-info__header {
+        height: 72px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        p {
+          margin-top: 30px;
+          font-size: 18px;
+          font-weight: 600;
+          line-height: 22px;
+          letter-spacing: 0;
+          text-align: left;
+        }
+      }
+
+      .tab-all-info__item {
+        padding-bottom: 10px;
+        border-top: 1px solid;
+
+        .info-item__title {
+          margin-top: 20px;
+          margin-bottom: 15px;
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 19px;
+          letter-spacing: 0.04em;
+          text-align: left;
+        }
+
+        .info-item__title-row {
+          width: 100%;
+          display: flex;
+          align-items: flex-start;
+          justify-content: start;
+
+          .title-row-base {
+            height: 35px;
+            padding: 10px 0;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 15px;
+            letter-spacing: 0.04em;
+
+            &.title-row__title {
+              height: max-content;
+              padding-right: 50px;
+              flex: 0 1 235px;
+            }
+
+            &.title-row__text {
+              max-width: 570px;
+              margin-right: 50px;
+              margin-left: 5px;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+
+            &.title-row__input {
+              width: 275px;
+              padding: 10px 5px;
+              border: none;
+              border-radius: 10px;
+              background: transparent;
+              transition: background .3s linear;
+
+              &.title-row__big{
+                width: 570px;
+              }
+
+              &:focus {
+                outline: none;
+                & + .title-row__label{
+                  &::after{
+                    opacity: 1;
+                  }
+                  &::before{
+                    opacity: 0;
+                  }
+                }
+              }
+            }
+          }
+
+          .title-row__label {
+            position: relative;
+
+            &::after,
+            &::before{
+              content: "";
+              display: block;
+              position: absolute;
+              top: 10px;
+              z-index: 20;
+              transition: all .3s linear;
+            }
+
+            &::after {
+              width: 25px;
+              height: 25px;
+              left: -310px;
+              opacity: 0;
+            }
+
+            &.title-row__big::after{
+              left: -605px;
+            }
+  
+            &::before {
+              width: 15px;
+              height: 15px;
+              background: url(../icons/pencil_staff.png);
+              left: -305px;
+              opacity: 1;
+            }
+
+            &.title-row__big::before{
+              left: -600px;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
@@ -109,6 +246,48 @@
 
                         &.title-row__text {
                           color: #4f4f4f;
+                        }
+                      }
+                    }
+                  }
+                }
+                .tab-all-info__edit {
+                  .tab-all-info__header {
+                    p {
+                      color: #21317a;
+                    }
+                  }
+
+                  .tab-all-info__item {
+                    border-color: #e0e0e0;
+
+                    .info-item__title {
+                      color: #000000;
+                    }
+
+                    .info-item__title-row {
+                      .title-row-base {
+                        &.title-row__title {
+                          color: #000000;
+                        }
+
+                        &.title-row__text {
+                          color: #4f4f4f;
+                        }
+
+                        &.title-row__input {
+                          color: #4f4f4f;
+            
+                          &:focus {
+                            background: #e0e0e0;
+                          }
+                        }
+                      }
+
+                      .title-row__label {
+            
+                        &::after {
+                          background: url(../icons/isactive_ebit_btn_light.png);
                         }
                       }
                     }
@@ -153,6 +332,48 @@
 
                         &.title-row__text {
                           color: #f2f2f2;
+                        }
+                      }
+                    }
+                  }
+                }
+                .tab-all-info__edit {
+                  .tab-all-info__header {
+                    p {
+                      color: #495cff;
+                    }
+                  }
+
+                  .tab-all-info__item {
+                    border-color: #333333;
+
+                    .info-item__title {
+                      color: #ffffff;
+                    }
+
+                    .info-item__title-row {
+                      .title-row-base {
+                        &.title-row__title {
+                          color: #ffffff;
+                        }
+
+                        &.title-row__text {
+                          color: #f2f2f2;
+                        }
+
+                        &.title-row__input {
+                          color: #F2F2F2;
+            
+                          &:focus {
+                            background: #4F4F4F;
+                          }
+                        }
+                      }
+
+                      .title-row__label {
+            
+                        &::after {
+                          background: url(../icons/isactive_ebit_btn_dark.png);
                         }
                       }
                     }
