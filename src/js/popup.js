@@ -62,14 +62,14 @@ checkEdit.addEventListener("change", () => {
   toggleClassViewEdit();
 });
 
-closeBtn.addEventListener('click', ()=>{
-  if(checkEdit.checked){
+closeBtn.addEventListener('click', () => {
+  if (checkEdit.checked) {
     checkEdit.checked = !checkEdit.checked;
   };
   toggleClassViewEdit();
 });
 
-function toggleClassViewEdit(){
+function toggleClassViewEdit() {
   if (checkEdit.checked) {
     for (let tab of tabs_edit) {
       if (!tab.classList.contains("tab-isactive")) {
@@ -93,5 +93,55 @@ function toggleClassViewEdit(){
       };
     };
   };
+};
+//#endregion
+
+//#region //! Обработка селекта
+const dropdownBtns = document.getElementsByClassName('dropdown__button');
+// TODO Клик по кнопке, Открытие\Закрытие select
+for (let btn of dropdownBtns) {
+  const ddList = inList(btn);
+  btn.addEventListener('click', () => {
+    ddList.classList.toggle('dropdown__list--visible');
+    btn.classList.toggle('dropdown__button--active');
+  });
+  document.addEventListener('click', e => {
+    if (e.target !== btn) {
+      btn.classList.remove('dropdown__button--active');
+      ddList.classList.remove('dropdown__list--visible');
+    }
+  })
+
+  document.addEventListener('keydown', e => {
+    if(e.key === 'Tab' || e.key === 'Escape'){
+      btn.classList.remove('dropdown__button--active');
+      ddList.classList.remove('dropdown__list--visible');
+    }
+  })
+}
+
+// TODO Выбор элемента списка, Запоминание выбранного значение, Закрытие дропдауна
+function inList(btn) {
+  let inputHidden;
+  for (let input of btn.parentElement.children) {
+    if (input.classList.contains('dropdown__input-hidden')) {
+      inputHidden = input;
+    }
+  };
+  for (let list of btn.parentElement.children) {
+    if (list.classList.contains('dropdown__list')) {
+      for (let listItem of list.children) {
+        listItem.addEventListener('click', e => {
+          e.stopPropagation();
+          btn.innerText = listItem.innerText;
+          btn.focus();
+          inputHidden.value = listItem.dataset.value;
+          list.classList.remove('dropdown__list--visible');
+          btn.classList.remove('dropdown__button--active');
+        })
+      }
+      return list;
+    }
+  }
 };
 //#endregion

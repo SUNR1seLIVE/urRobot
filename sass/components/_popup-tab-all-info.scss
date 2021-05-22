@@ -154,22 +154,106 @@
               border: none;
               border-radius: 10px;
               background: transparent;
-              transition: background .3s linear;
+              transition: background 0.3s linear;
 
-              &.title-row__big{
+              &.title-row__big {
                 width: 570px;
               }
 
               &:focus {
                 outline: none;
-                & + .title-row__label{
-                  &::after{
+                & + .title-row__label {
+                  &::after {
                     opacity: 1;
                   }
-                  &::before{
+                  &::before {
                     opacity: 0;
                   }
                 }
+              }
+            }
+
+            &.title-row__select {
+              width: 620px;
+              position: relative;
+              .dropdown__button {
+                position: relative;
+                display: block;
+                width: 100%;
+                padding-left: 5px;
+                padding-right: 20px;
+                outline: none;
+                
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 15px;
+                letter-spacing: 0.04em;
+                text-align: left;
+                color: #4F4F4F;
+
+                &::after {
+                  content: "";
+                  position: absolute;
+                  top: 50%;
+                  right: 0;
+                  transform: translateY(-50%);
+                  width: 15px;
+                  height: 15px;
+                  background-image: url(../icons/arrow_down_select_light.png);
+
+                  pointer-events: none;
+                  transition: all 0.3s linear;
+                }
+                &.dropdown__button--active{
+                  &::after {
+                    background-image: url(../icons/arrow_up_select_light.png);
+                  }
+                }
+              }
+
+              .dropdown__list {
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+                overflow: hidden;
+                background-color: #bdd9eb;
+                box-shadow: 0 15px 15px rgba(0, 0, 0, 0.15);
+                border-radius: 0 0 10px 10px;
+
+                display: none;
+
+
+                position: absolute;
+                left: 0;
+                top: 35px;
+                z-index: 25;
+
+                & .dropdown__list-item {
+                  margin: 0;
+                  padding: 12px 15px 13px 15px;
+                  
+                  font-size: 12px;
+                  font-weight: 500;
+                  line-height: 15px;
+                  letter-spacing: 0.04em;
+                  text-align: left;
+                  color: #333333;
+                  transition: background .3s linear;
+
+                  &:hover{
+                    background-color: #A5BFD0;
+                    cursor: pointer;
+                  }
+                }
+
+                &.dropdown__list--visible{
+                  display: block;
+                }
+              }
+
+              .dropdown__input-hidden{
+                display: none;
               }
             }
           }
@@ -178,13 +262,13 @@
             position: relative;
 
             &::after,
-            &::before{
+            &::before {
               content: "";
               display: block;
               position: absolute;
               top: 10px;
               z-index: 20;
-              transition: all .3s linear;
+              transition: all 0.3s linear;
             }
 
             &::after {
@@ -194,10 +278,10 @@
               opacity: 0;
             }
 
-            &.title-row__big::after{
+            &.title-row__big::after {
               left: -605px;
             }
-  
+
             &::before {
               width: 15px;
               height: 15px;
@@ -206,7 +290,7 @@
               opacity: 1;
             }
 
-            &.title-row__big::before{
+            &.title-row__big::before {
               left: -600px;
             }
           }
@@ -277,7 +361,7 @@
 
                         &.title-row__input {
                           color: #4f4f4f;
-            
+
                           &:focus {
                             background: #e0e0e0;
                           }
@@ -285,7 +369,6 @@
                       }
 
                       .title-row__label {
-            
                         &::after {
                           background: url(../icons/isactive_ebit_btn_light.png);
                         }
@@ -362,16 +445,15 @@
                         }
 
                         &.title-row__input {
-                          color: #F2F2F2;
-            
+                          color: #f2f2f2;
+
                           &:focus {
-                            background: #4F4F4F;
+                            background: #4f4f4f;
                           }
                         }
                       }
 
                       .title-row__label {
-            
                         &::after {
                           background: url(../icons/isactive_ebit_btn_dark.png);
                         }

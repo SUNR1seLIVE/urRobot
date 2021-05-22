@@ -1439,7 +1439,6 @@
 
               <!-- Контейнер для вкладки "Общая информация (редактирование)" -->
               <div id="tab-all-info__edit" class="tab-all-info__edit">
-
                 <!-- Шапка -->
                 <div class="tab-all-info__header">
                   <p>Общие данные организации</p>
@@ -1478,10 +1477,29 @@
                     <p class="title-row-base title-row__title">
                       Тип организации
                     </p>
-                    <p class="title-row-base title-row__text">
-                      Управление эксплуатацией жилого фонда за вознаграждение
-                      или на договорной основе
-                    </p>
+
+                    <div class="title-row-base title-row__select">
+                      <button class="dropdown__button">
+                        Управление эксплуатацией жилого фонда за вознаграждение или на договорной основе
+                      </button>
+                      <ul class="dropdown__list">
+                        <li class="dropdown__list-item" data-value="value1">
+                          Управление эксплуатацией жилого фонда за вознаграждение или на договорной основе
+                        </li>
+                        <li class="dropdown__list-item" data-value="value2">
+                          Тип расчета пени 2
+                        </li>
+                        <li class="dropdown__list-item" data-value="value3">
+                          Тип расчета пени 3
+                        </li>
+                      </ul>
+                      <input
+                        type="text"
+                        name="select-category"
+                        value="value1"
+                        class="dropdown__input-hidden"
+                      />
+                    </div>
                   </div>
 
                   <div class="info-item__title-row">
@@ -1495,16 +1513,56 @@
                     <p class="title-row-base title-row__title">
                       Система налогообложения
                     </p>
-                    <p class="title-row-base title-row__text">
-                      Упрощенная система налогооблажения
-                    </p>
+
+                    <div class="title-row-base title-row__select">
+                      <button class="dropdown__button">
+                        Упрощенная система налогооблажения
+                      </button>
+                      <ul class="dropdown__list">
+                        <li class="dropdown__list-item" data-value="value1">
+                          Упрощенная система налогооблажения
+                        </li>
+                        <li class="dropdown__list-item" data-value="value2">
+                          Тип расчета пени 2
+                        </li>
+                        <li class="dropdown__list-item" data-value="value3">
+                          Тип расчета пени 3
+                        </li>
+                      </ul>
+                      <input
+                        type="text"
+                        name="select-category"
+                        value="value1"
+                        class="dropdown__input-hidden"
+                      />
+                    </div>
                   </div>
 
                   <div class="info-item__title-row">
                     <p class="title-row-base title-row__title">
                       Тип расчета пени
                     </p>
-                    <p class="title-row-base title-row__text">155 ЖК РФ</p>
+
+                    <div class="title-row-base title-row__select">
+                      <button class="dropdown__button">155 ЖК РФ</button>
+                      <ul class="dropdown__list">
+                        <li class="dropdown__list-item" data-value="value1">
+                          155 ЖК РФ
+                        </li>
+                        <li class="dropdown__list-item" data-value="value2">
+                          Тип расчета пени 2
+                        </li>
+                        <li class="dropdown__list-item" data-value="value3">
+                          Тип расчета пени 3
+                        </li>
+                      </ul>
+                      <input
+                        type="text"
+                        name="select-category"
+                        value="value1"
+                        class="dropdown__input-hidden"
+                      />
+                    </div>
                   </div>
                 </div>
 
@@ -1520,7 +1578,8 @@
                       type="tel"
                       class="title-row-base title-row__input"
                       placeholder="Введите текст..."
-                      value="8(496)5669956">
+                      value="8(496)5669956"
+                    />
 
                     <label for="tel" class="title-row__label"></label>
                   </div>
@@ -1533,8 +1592,9 @@
                       type="tel"
                       class="title-row-base title-row__input"
                       placeholder="Введите текст..."
-                      value="8(496)5669956">
-                      
+                      value="8(496)5669956"
+                    />
+
                     <label for="fax" class="title-row__label"></label>
                   </div>
 
@@ -1546,8 +1606,9 @@
                       type="url"
                       class="title-row-base title-row__input"
                       placeholder="Введите текст..."
-                      value="urrobot.net">
-                      
+                      value="urrobot.net"
+                    />
+
                     <label for="website" class="title-row__label"></label>
                   </div>
 
@@ -1561,8 +1622,9 @@
                       type="email"
                       class="title-row-base title-row__input"
                       placeholder="Введите текст..."
-                      value="info@urrobot.net">
-                      
+                      value="info@urrobot.net"
+                    />
+
                     <label for="email1" class="title-row__label"></label>
                   </div>
 
@@ -1576,8 +1638,9 @@
                       type="email"
                       class="title-row-base title-row__input"
                       placeholder="Введите текст..."
-                      value="buh@urrobot.net">
-                      
+                      value="buh@urrobot.net"
+                    />
+
                     <label for="email2" class="title-row__label"></label>
                   </div>
                 </div>
@@ -1599,7 +1662,26 @@
                     <p class="title-row-base title-row__title">
                       Основание полномочий подписанта
                     </p>
-                    <p class="title-row-base title-row__text">Устав</p>
+                    <div class="title-row-base title-row__select">
+                      <button class="dropdown__button">Устав</button>
+                      <ul class="dropdown__list">
+                        <li class="dropdown__list-item" data-value="value1">
+                          Устав
+                        </li>
+                        <li class="dropdown__list-item" data-value="value2">
+                          Тип расчета пени 2
+                        </li>
+                        <li class="dropdown__list-item" data-value="value3">
+                          Тип расчета пени 3
+                        </li>
+                      </ul>
+                      <input
+                        type="text"
+                        name="select-category"
+                        value="value1"
+                        class="dropdown__input-hidden"
+                      />
+                    </div>
                   </div>
 
                   <div class="info-item__title-row">
@@ -1612,11 +1694,12 @@
                       type="text"
                       class="title-row-base title-row__input"
                       placeholder="Введите текст..."
-                      value="Пупкин Сергей Петрович">
+                      value="Пупкин Сергей Петрович"
+                    />
 
                     <label
-                    for="attorney-in-fact"
-                    class="title-row__label"
+                      for="attorney-in-fact"
+                      class="title-row__label"
                     ></label>
                   </div>
                 </div>
@@ -1635,11 +1718,12 @@
                       type="text"
                       class="title-row-base title-row__input title-row__big"
                       placeholder="Введите текст..."
-                      value="141108, обл. Московская, г. Щелково, ул. Краснознаменская, д.3">
+                      value="141108, обл. Московская, г. Щелково, ул. Краснознаменская, д.3"
+                    />
 
                     <label
-                    for="ur-adress"
-                    class="title-row__label title-row__big"
+                      for="ur-adress"
+                      class="title-row__label title-row__big"
                     ></label>
                   </div>
 
@@ -1683,12 +1767,10 @@
                       type="text"
                       class="title-row-base title-row__input"
                       placeholder="Введите текст..."
-                      value='1035010203800'>
+                      value="1035010203800"
+                    />
 
-                    <label
-                    for="ogrn"
-                    class="title-row__label"
-                    ></label>
+                    <label for="ogrn" class="title-row__label"></label>
                   </div>
 
                   <div class="info-item__title-row">
@@ -1701,12 +1783,10 @@
                       type="text"
                       class="title-row-base title-row__input"
                       placeholder="Введите текст..."
-                      value='40702810608360001624'>
+                      value="40702810608360001624"
+                    />
 
-                    <label
-                    for="raschet"
-                    class="title-row__label"
-                    ></label>
+                    <label for="raschet" class="title-row__label"></label>
                   </div>
 
                   <div class="info-item__title-row">
@@ -1717,12 +1797,10 @@
                       type="text"
                       class="title-row-base title-row__input"
                       placeholder="Введите текст..."
-                      value='044525297'>
+                      value="044525297"
+                    />
 
-                    <label
-                    for="bik"
-                    class="title-row__label"
-                    ></label>
+                    <label for="bik" class="title-row__label"></label>
                   </div>
 
                   <div class="info-item__title-row">
@@ -1735,11 +1813,12 @@
                       type="text"
                       class="title-row-base title-row__input title-row__big"
                       placeholder="Введите текст..."
-                      value='ФИЛИАЛ ЦЕНТРАЛЬНЫЙ ПАО БАНКА "ФК ОТКРЫТИЕ"'>
+                      value='ФИЛИАЛ ЦЕНТРАЛЬНЫЙ ПАО БАНКА "ФК ОТКРЫТИЕ"'
+                    />
 
                     <label
-                    for="full_name_bank"
-                    class="title-row__label title-row__big"
+                      for="full_name_bank"
+                      class="title-row__label title-row__big"
                     ></label>
                   </div>
 
@@ -1753,12 +1832,10 @@
                       type="text"
                       class="title-row-base title-row__input"
                       placeholder="Введите текст..."
-                      value='30101810945250000297'>
+                      value="30101810945250000297"
+                    />
 
-                    <label
-                    for="kopchet"
-                    class="title-row__label"
-                    ></label>
+                    <label for="kopchet" class="title-row__label"></label>
                   </div>
                 </div>
               </div>
