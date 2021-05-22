@@ -206,7 +206,7 @@
                 }
                 &.dropdown__button--active{
                   &::after {
-                    background-image: url(../icons/arrow_up_select_light.png);
+                    transform: translateY(-50%) rotateX(180deg);
                   }
                 }
               }
