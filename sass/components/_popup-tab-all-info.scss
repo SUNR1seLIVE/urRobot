@@ -189,7 +189,6 @@
                 line-height: 15px;
                 letter-spacing: 0.04em;
                 text-align: left;
-                color: #4F4F4F;
 
                 &::after {
                   content: "";
@@ -199,7 +198,6 @@
                   transform: translateY(-50%);
                   width: 15px;
                   height: 15px;
-                  background-image: url(../icons/arrow_down_select_light.png);
 
                   pointer-events: none;
                   transition: all 0.3s linear;
@@ -217,13 +215,9 @@
                 padding: 0;
                 list-style-type: none;
                 overflow: hidden;
-                background-color: #bdd9eb;
                 box-shadow: 0 15px 15px rgba(0, 0, 0, 0.15);
                 border-radius: 0 0 10px 10px;
-
                 display: none;
-
-
                 position: absolute;
                 left: 0;
                 top: 35px;
@@ -232,17 +226,14 @@
                 & .dropdown__list-item {
                   margin: 0;
                   padding: 12px 15px 13px 15px;
-                  
                   font-size: 12px;
                   font-weight: 500;
                   line-height: 15px;
                   letter-spacing: 0.04em;
                   text-align: left;
-                  color: #333333;
                   transition: background .3s linear;
 
                   &:hover{
-                    background-color: #A5BFD0;
                     cursor: pointer;
                   }
                 }
@@ -366,6 +357,28 @@
                             background: #e0e0e0;
                           }
                         }
+
+                        &.title-row__select {
+                          .dropdown__button {
+                            color: #4F4F4F;
+            
+                            &::after {
+                              background-image: url(../icons/arrow_down_select_light.png);
+                            }
+                          }
+            
+                          .dropdown__list {
+                            background-color: #bdd9eb;
+            
+                            & .dropdown__list-item {
+                              color: #333333;
+
+                              &:hover{
+                                background-color: #A5BFD0;
+                              }
+                            }
+                          }
+                        }
                       }
 
                       .title-row__label {
@@ -449,6 +462,28 @@
 
                           &:focus {
                             background: #4f4f4f;
+                          }
+                        }
+
+                        &.title-row__select {
+                          .dropdown__button {
+                            color: #F2F2F2;
+            
+                            &::after {
+                              background-image: url(../icons/arrow_down_select_dark.png);
+                            }
+                          }
+            
+                          .dropdown__list {
+                            background-color: #333333;
+            
+                            & .dropdown__list-item {
+                              color: #E0E0E0;
+
+                              &:hover{
+                                background-color: #283F50;
+                              }
+                            }
                           }
                         }
                       }
